@@ -12,6 +12,7 @@ section.third h2 {
   margin: 40px auto;
 }
 section.third .row div span {
+    cursor: pointer;
   border-radius: 50%;
   width: 40px;
   bottom: -15px;
