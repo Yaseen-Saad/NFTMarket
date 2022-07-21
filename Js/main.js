@@ -17,3 +17,8 @@ window.addEventListener("scroll", () => {
     scrollToTop.style.transform = "translateY(200px)";
   }
 });
+
+// Nav
+let toggler = document.querySelector(".toggler");
+let ul = document.querySelector("header > ul");
+toggler.onclick = () => ul.classList.toggle("active");
