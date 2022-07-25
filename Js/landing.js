@@ -33,8 +33,7 @@ const startSlide = () => {
 //to make sure that the slide finish to repeat
 slide.addEventListener("transitionend",() => {
     // To make sure that the append of the cloned img is happend 
-    slides = document.querySelectorAll(".slide")
-    
+    slides = document.querySelectorAll(".slide")git 
     if(slides[index].id === firstClone.id){
         slide.style.transition = "none"
         index = 1;
