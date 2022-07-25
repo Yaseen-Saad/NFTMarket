@@ -17,15 +17,18 @@
 }
 /* ScrollToTop */
 .ToTop {
-  display: inline-block;
+  width: 60px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 80px;
+  right: -60px;
   transition: 0.3s ease-in-out;
-  transform: translateY(200px);
-  cursor: pointer;
   padding: 5px 10px;
   color: var(--light);
   border-radius: 1px;
   background-color: var(--SecoundryColor);
+  cursor: pointer;
 }
