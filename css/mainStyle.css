@@ -1,31 +1,31 @@
-/* Glopal */
+/* Global */
 * {
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-  text-decoration: none;
-  transition: 0.5s ease-in-out;
-  overflow-x: clip;
-  text-transform: capitalize;
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+	text-decoration: none;
+	transition: 0.5s ease-in-out;
+	overflow-x: clip;
+	text-transform: capitalize;
 }
 /* Variables */
 :root {
-  --mainColor: #282b2f;
-  --light: #fff;
-  --mainPadding: 5%;
-  --black: #000;
-  --SecoundryColor: #7453fc;
+	--mainColor: #282b2f;
+	--light: #fff;
+	--mainPadding: 5%;
+	--black: #000;
+	--secondaryColor: #7453fc;
 }
 /* ScrollToTop */
 .ToTop {
-  display: inline-block;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  transition: 0.3s ease-in-out;
-  transform: translateY(200px);
-  cursor: pointer;
-  padding: 5px 10px;
-  color: var(--light);
-  border-radius: 1px;
-  background-color: var(--SecoundryColor);
+	display: inline-block;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	transition: 0.3s ease-in-out;
+	transform: translateY(200px);
+	cursor: pointer;
+	padding: 5px 10px;
+	color: var(--light);
+	border-radius: 1px;
+	background-color: var(--secondaryColor);
 }

@@ -1,51 +1,51 @@
 .categories {
-  background-image: url(.././images/dark-bg.jpg);
-  padding: var(--mainPadding);
+	background-image: url(.././images/dark-bg.jpg);
+	padding: var(--mainPadding);
 }
 .categories > div:first-of-type {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 20px 15px;
-  color: #fff;
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 20px 15px;
+	color: #fff;
 }
 .categories > div:first-of-type > div {
-  display: flex;
-  position: relative;
-  height: 100px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: var(--mainColor);
-  border-radius: 30px;
-  overflow: visible;
-  margin-bottom: 10px;
+	display: flex;
+	position: relative;
+	height: 100px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: var(--mainColor);
+	border-radius: 30px;
+	overflow: visible;
+	margin-bottom: 10px;
 }
 .categories > div:first-of-type > div p {
-  margin: 0 0 20px 0;
+	margin: 0 0 20px 0;
 }
 .categories > div:first-of-type > div > span:last-child {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  color: var(--SecoundryColor);
-  bottom: -15px;
-  cursor: pointer;
-  opacity: 0;
-  z-index: 3;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	color: var(--secondaryColor);
+	bottom: -15px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 3;
 }
 .categories > div:first-of-type > div > span:last-child :not(object) {
-  transition: 0.1s cubic-bezier(0, 2.84, 0.7, 1.71);
+	transition: 0.1s cubic-bezier(0, 2.84, 0.7, 1.71);
 }
 .categories > div:first-of-type > div > span:last-child:hover {
-  background-color: var(--SecoundryColor);
-  color: #fff;
+	background-color: var(--secondaryColor);
+	color: #fff;
 }
 .categories > div:first-of-type > div:hover > span:last-child {
-  opacity: 1;
+	opacity: 1;
 }

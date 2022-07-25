@@ -1,0 +1,114 @@
+#home-market {
+	background-color: var(--mainColor);
+	padding: var(--mainPadding);
+	background-image: url(../images/dark-bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#home-market .market-nav {
+	color: white;
+	display: flex;
+	align-items: center;
+}
+
+#home-market .market-nav .title {
+	font-size: 3vw;
+	font-weight: 700;
+	max-width: fit-content;
+}
+
+@media (max-width: 991px) {
+	#home-market .market-nav {
+		flex-direction: column;
+	}
+	#home-market .market-nav .title {
+		margin-bottom: 0;
+		font-size: 5.5vw;
+	}
+}
+
+#home-market .market-nav .title .items {
+	color: var(--secondaryColor);
+}
+
+#home-market .market-nav .filters {
+	display: flex;
+	flex: 1;
+	gap: 10px;
+	justify-content: flex-end;
+}
+
+@media (max-width: 991px) {
+	#home-market .market-nav .filters {
+		margin-left: -1.7rem;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+#home-market .market-nav .filters .filter {
+	font-size: 15px;
+	font-weight: 500;
+	cursor: pointer;
+	padding: 8px 15px;
+	border-radius: 33px;
+}
+
+#home-market .market-nav .filters .filter:hover {
+	background-color: var(--secondaryColor);
+}
+
+#home-market .market-nav .filters .filter.active {
+	background-color: var(--secondaryColor);
+}
+
+#home-market .market-content {
+	display: flex;
+	justify-content: space-between;
+}
+
+#home-market .market-content .item {
+	flex-basis: 47%;
+	display: grid;
+	color: white;
+	background-color: var(--mainColor);
+	border: 1px solid #404245;
+	border-radius: 20px;
+	padding: 20px;
+	align-items: center;
+	grid-template-columns: 33% 20px 25% 20% 15%;
+	grid-template-rows: repeat(5, auto);
+	grid-template-areas:
+		"nft-img . nft-title nft-title nft-title"
+		"nft-img . artist artist artist"
+		"nft-img . bid deadline deadline"
+		"nft-img . bid deadline deadline"
+		"nft-img . details-link details-link details-link";
+}
+
+#home-market .market-content .item .nft-img {
+	grid-area: nft-img;
+	max-width: 100%;
+}
+
+#home-market .market-content .item .item-name {
+	margin: 0;
+	grid-area: nft-title;
+}
+
+#home-market .market-content .item .artist {
+	grid-area: artist;
+}
+
+#home-market .market-content .item .bid-section {
+	grid-area: bid;
+}
+
+#home-market .market-content .item .deadline-section {
+	grid-area: deadline;
+}
+
+#home-market .market-content .item .details-link {
+	grid-area: details-link;
+}
