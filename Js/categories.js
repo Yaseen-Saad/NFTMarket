@@ -39,7 +39,6 @@ secSlider.innerHTML = "";
 sliderCont.innerHTML = items;
 sliderCont.classList.add("Slider-Container");
 secSlider.prepend(sliderCont);
-console.log(elementMargin);
 let intervalNext;
 let intarvalPrev;
 function nextInt() {
@@ -47,7 +46,6 @@ function nextInt() {
     sliderCont.style.transform = `translateX(-${
       (itemsWidth + elementMargin) * slidesCount
     }px)`;
-    console.log(sliderCont);
     slidesCount++;
   }, 1000);
 }
@@ -57,7 +55,6 @@ function prevInt() {
     sliderCont.style.transform = `translateX(-${
       (itemsWidth + elementMargin) * slidesCount
     }px)`;
-    console.log(sliderCont);
   }, 1000);
 }
 sliderCont.addEventListener("transitionend", () => {
