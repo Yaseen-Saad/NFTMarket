@@ -1,5 +1,5 @@
 let categories = document.querySelector(".categories > div");
-fetch("JSON/categriesData.JSON")
+fetch("../Json/categriesData.JSON")
   .then((response) => response.json())
   .then((data) => {
     for (let i = 0; i < data.length; i++) {
@@ -18,8 +18,7 @@ fetch("JSON/categriesData.JSON")
       categories.prepend(parent);
     }
   });
-
-fetch("JSON/categoriesSliderData.JSON")
+fetch("../Json/categoriesSliderData.JSON")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((item) => {
@@ -69,7 +68,8 @@ fetch("JSON/categoriesSliderData.JSON")
       slide.append(txtBox);
       slider.append(slide);
     });
-  })
+  });
+
 setTimeout(() => {
   let secSlider = document.querySelector(".carousel-slider"),
     items = secSlider.innerHTML,
