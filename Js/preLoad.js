@@ -1,5 +1,3 @@
 window.onload = () => {
-  setTimeout(() => {
-    document.querySelector('.preLoad').classList.add('active')
-  }, 2000);
+  document.querySelector(".preLoad").classList.add("active");
 };
