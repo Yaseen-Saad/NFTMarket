@@ -1,5 +1,5 @@
 let categories = document.querySelector(".categories > div");
-fetch("../JSON/categriesData.JSON")
+fetch("JSON/categriesData.JSON")
   .then((response) => response.json())
   .then((data) => {
     for (let i = 0; i < data.length; i++) {
@@ -19,7 +19,7 @@ fetch("../JSON/categriesData.JSON")
     }
   });
 
-fetch("../JSON/categoriesSliderData.JSON")
+fetch("JSON/categoriesSliderData.JSON")
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
