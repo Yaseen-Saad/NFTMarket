@@ -6,13 +6,15 @@ header {
   height: 100px;
   width: 100%;
 }
-header ul:not(.responsive) li {
-  padding: 8px 10px;
+header ul:not(.responsive) {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin: 0;
   padding: 0;
+}
+header ul:not(.responsive) li {
+  padding: 8px 10px;
 
   cursor: pointer;
   transition: 0.5s ease-in-out all;
