@@ -1,0 +1,26 @@
+[
+    {
+       "title":"Mutant Bored Ape Yacht Club",
+       "imgSrc":"images/collection-01.jpg",
+       "colliction":"310/340",
+       "category":"Digital"
+    },
+    {
+       "title":"Bored Ape Kennel Club",
+       "imgSrc":"images/collection-01.jpg",
+       "colliction":"120/329",
+       "category":"Visual Art"
+    },
+    {
+       "title":"Genesis Collective Statue",
+       "imgSrc":"images/collection-01.jpg",
+       "colliction":"380/394",
+       "category":"Music Art"
+    },
+    {
+       "title":"Worldwide Artwork Ground<",
+       "imgSrc":"images/collection-01.jpg",
+       "colliction":"426/468",
+       "category":"Blockchain"
+    }
+ ]
