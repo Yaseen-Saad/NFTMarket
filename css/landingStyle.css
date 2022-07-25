@@ -2,42 +2,44 @@
     width: 100%;
     height: 145vh;
     background-image: url(../images/banner-bg.jpg);
-    background-size: 100%;
+    background-size: 100% contain;
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .landing .landing-content{
-    padding: 0 0 0 54px;
+    padding: 0 0 15% 6%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-flow: column;
     width: 50%;
     height: 100%;
+    
 }
 .landing .landing-content h6{
     color: white;
-    font-size: 20px;
+    font-size: 1.3em;
     font-weight: bolder;
 }
 .landing .landing-content h2{
     color: white;
-    font-size: 50px;
+    font-size: 3em;
     line-height: 80px;
     font-weight: bolder;
 }
 .landing .landing-content p{
     color: white;
-    font-size: 16px;
-    line-height: 40px;
+    font-size: .94em;
+    line-height: 2em;
 }
 .landing .landing-content .btns{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px;
+    margin-left: -80px;
 }
 .landing .landing-content .btns div{
     width: 200px;
@@ -100,7 +102,7 @@
     flex-wrap: nowrap;
     overflow: hidden;
     position: relative;
-    margin: 0 50px 100px 0;
+    margin: 0 50px 250px 0;
 }
 .container-slider > .slider{
     display: flex;
@@ -120,11 +122,11 @@
     height: 320px;
 }
 .landing .controls{
-    transform: translate(130px,-80px);
-    -webkit-transform: translate(130px,-80px);
-    -moz-transform: translate(130px,-80px);
-    -ms-transform: translate(130px,-80px);
-    -o-transform: translate(130px,-80px);
+    transform: translate(130px,-220px);
+    -webkit-transform: translate(130px,-220px);
+    -moz-transform: translate(130px,-220px);
+    -ms-transform: translate(130px,-220px);
+    -o-transform: translate(130px,-220px);
 }
 .landing .controls button{
     width: 60px;
@@ -138,4 +140,87 @@
     border: none;
     outline: none;
     margin: 0 10px;
+}
+@media(min-width:768px) and (max-width:991px) {
+.landing .landing-content{
+    padding: 0 0 0 20px;
+    width: 67%;
+}
+.landing .landing-content h2 {
+    font-size: 2em;
+    line-height: 39px;
+}
+.landing .landing-content p {
+    font-size: 0.78em;
+}
+.landing .landing-content .btns {
+    margin-left: 0px;
+}
+.landing {
+    flex-flow: column;
+    height: 200vh;
+}
+.container-slider {
+    width: 450px;
+    height: 350px;
+    margin-bottom: 400px;
+}
+.slide img {
+    width: 400px;
+    height: 350px;
+}
+.landing .controls {
+    transform: translate(120px, -390px);
+    -webkit-transform: translate(120px, -390px);
+    -moz-transform: translate(120px, -390px);
+    -ms-transform: translate(120px, -390px);
+    -o-transform: translate(120px, -390px);
+}
+}
+@media (max-width: 767px) {
+.landing .landing-content {
+    padding: 0 0 0 20px;
+    width: 82%;
+    margin-top: 15px;
+}
+.landing .landing-content h2 {
+    font-size: 1.5em;
+    line-height: 29px;
+        }
+.landing .landing-content h6 {
+    font-size: 0.9em;
+}
+.landing .landing-content p {
+    font-size: 0.78em;
+    line-height: 1.2em;
+}
+.landing .landing-content .btns {
+    margin-left: -72px;
+    margin-bottom: 80px;
+}
+.landing .landing-content .btns div{
+    width: 114px;
+    height: 60px;
+}
+.landing {
+    flex-flow: column;
+    height: 200vh;
+}
+.container-slider {
+    width: 412px;
+    height: 350px;
+    margin-left: 50px;
+    margin-bottom: 966px;
+}
+.slide img {
+    width: 412px;
+    height: 350px;
+}
+    .landing .controls {
+    transform: translate(160px, -980px);
+    -webkit-transform: translate(160px, -980px);
+    -moz-transform: translate(160px, -980px);
+    -ms-transform: translate(160px, -980px);
+    -o-transform: translate(160px, -980px);
+}
 }
