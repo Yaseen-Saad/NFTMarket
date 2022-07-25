@@ -22,23 +22,32 @@ fetch("../JSON/categriesData.JSON")
 let secSlider = document.querySelector(".carousel-slider"),
   items = secSlider.innerHTML,
   sliderCont = document.createElement("div"),
-  item = document.querySelectorAll(".carousel-slider .item")[0],
-  itemsMargin = getComputedStyle(item),
-  itemsWidth = item.clientWidth,
-  CurrWidth = itemsWidth;
+  item = document.querySelectorAll(".carousel-slider .item "),
+  itemsMargin = getComputedStyle(item[0]),
+  itemsWidth = item[0].clientWidth,
+  elementMargin =
+    parseInt(
+      window
+        .getComputedStyle(
+          document.querySelector(".carousel-slider .item:first-child ")
+        )
+        .margin.split("px")[1]
+    ) * 2,
+  slidesCount = 1;
+CurrWidth = itemsWidth;
 secSlider.innerHTML = "";
 sliderCont.innerHTML = items;
 sliderCont.classList.add("Slider-Container");
 secSlider.prepend(sliderCont);
 //.Slider-Container
-let slidesCount = 0;
-console.log(item.style.margin);
+console.log(elementMargin);
 setInterval(() => {
   if (slidesCount == 3) {
     clearInterval(1);
   }
-  sliderCont.style.transform = `translateX(-${itemsWidth}px)`;
-  itemsWidth += CurrWidth;
+  sliderCont.style.transform = `translateX(-${
+    (itemsWidth + elementMargin * 2) * slidesCount
+  }px)`;
   console.log(sliderCont);
   slidesCount++;
 }, 1000);
