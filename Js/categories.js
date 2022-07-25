@@ -22,7 +22,6 @@ fetch("JSON/categriesData.JSON")
 fetch("JSON/categoriesSliderData.JSON")
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
     data.forEach((item) => {
       //Declaration
       let slide = document.createElement("div"),
@@ -99,7 +98,7 @@ setTimeout(() => {
         (itemsWidth + elementMargin) * slidesCount
       }px)`;
       slidesCount++;
-    }, 1000);
+    }, 4000);
   }
   function prevInt() {
     intarvalPrev = setInterval(() => {
@@ -107,7 +106,7 @@ setTimeout(() => {
       sliderCont.style.transform = `translateX(-${
         (itemsWidth + elementMargin) * slidesCount
       }px)`;
-    }, 1000);
+    }, 4000);
   }
   sliderCont.addEventListener("transitionend", () => {
     if (slidesCount == 4) {
@@ -120,4 +119,4 @@ setTimeout(() => {
     }
   });
   nextInt();
-}, 3000);
+}, 2000);
