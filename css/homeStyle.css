@@ -1,92 +1,41 @@
-section.third {
-  background-image: url(../images/dark-bg.jpg);
-  color: var(--light);
-  height: fit-content;
-  height: -webkit-fit-content;
-  padding: 50px 0;
-}
-section.third h2 {
-  position: relative;
-  width: fit-content;
-  width: -webkit-fit-content;
-  margin: 40px auto;
-}
-section.third .row div span {
-  cursor: pointer;
-  border-radius: 50%;
-  width: 40px;
-  bottom: -15px;
-  transition-delay: 0;
-  background-color: var(--light);
-  position: absolute;
-  color: var(--SecoundryColor);
-  display: flex;
-  justify-content: center;
-  transition: all 0.5s;
-  align-items: center;
-  opacity: 0;
-  height: 40px;
-}
-.i {
-  transition: 0.1s;
-}
-section.third .row div span:hover {
-  background-color: var(--SecoundryColor);
-}
-section.third .row div span:hover .i {
-  color: var(--light);
-}
-section.third .row div:hover span {
-  opacity: 1;
-}
-section.third .row div img {
-  background-color: var(--light);
-  border-radius: 50%;
-  padding: 10px;
-  width: 20%;
-  margin: 10px 0;
-}
-section.third h2 span {
-  color: var(--SecoundryColor);
-}
-section.third h2::before {
-  content: "";
-  width: 30%;
-  position: absolute;
-  height: 3px;
-  top: -30px;
-  left: 50%;
-  transform: translate(-50%);
-  background-color: var(--SecoundryColor);
-}
-section.third .row div {
-  background-color: var(--mainColor);
-  border-radius: 40px;
-  overflow: visible;
-  position: relative;
-  margin: 10px;
-  max-width: 570px;
-  height: 100px;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  display: flex;
-  padding: 10px;
-}
-section.third .row div span {
-  position: absolute;
-}
-@media (max-width: 769px) {
-  section.third .row div {
-    width: 45% !important;
-  }
-}
-@media (max-width: 420px) {
-  section.third .row div {
-    width: 90% !important;
-  }
-}
-/* .owl-carousel*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Junked Code*/
 .owl-carousel .item {
   border-radius: 5px;
   width: fit-content;
