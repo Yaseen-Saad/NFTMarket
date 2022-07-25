@@ -21,4 +21,8 @@ window.addEventListener("scroll", () => {
 // Nav
 let toggler = document.querySelector(".toggler");
 let ul = document.querySelector("header > ul");
-toggler.onclick = () => ul.classList.toggle("active");
+toggler.onclick = () => {
+  ul.classList.toggle("active");
+  toggler.classList.toggle("active");
+
+}
