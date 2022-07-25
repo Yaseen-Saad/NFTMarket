@@ -39,20 +39,19 @@ secSlider.innerHTML = "";
 sliderCont.innerHTML = items;
 sliderCont.classList.add("Slider-Container");
 secSlider.prepend(sliderCont);
-//.Slider-Container
 console.log(elementMargin);
 let intervalNext;
 let intarvalPrev;
 function nextInt() {
   intervalNext = setInterval(() => {
-  sliderCont.style.transform = `translateX(-${
-    (itemsWidth + elementMargin) * slidesCount
-  }px)`;
-  console.log(sliderCont);
-  slidesCount++;
-}, 1000);
+    sliderCont.style.transform = `translateX(-${
+      (itemsWidth + elementMargin) * slidesCount
+    }px)`;
+    console.log(sliderCont);
+    slidesCount++;
+  }, 1000);
 }
-function prevInt(){
+function prevInt() {
   intarvalPrev = setInterval(() => {
     slidesCount--;
     sliderCont.style.transform = `translateX(-${
@@ -61,14 +60,14 @@ function prevInt(){
     console.log(sliderCont);
   }, 1000);
 }
-sliderCont.addEventListener("transitionend",() => {
+sliderCont.addEventListener("transitionend", () => {
   if (slidesCount == 4) {
     clearInterval(intervalNext);
-    prevInt()
+    prevInt();
   }
   if(slidesCount == 0){
     clearInterval(intarvalPrev);
-    nextInt()
+    nextInt();
   }
-})
-nextInt()
+});
+nextInt();
