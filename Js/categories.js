@@ -40,14 +40,28 @@ sliderCont.innerHTML = items;
 sliderCont.classList.add("Slider-Container");
 secSlider.prepend(sliderCont);
 //.Slider-Container
-console.log(elementMargin);
-setInterval(() => {
-  if (slidesCount == 3) {
-    clearInterval(1);
+function prevInt() {
+  if (slidesCount === 0) {
+    sliderCont.style.transform = `translateX(-${
+      (itemsWidth + elementMargin) * slidesCount
+    }px)`;
+    slidesCount--;
+  } else {
+    nextInt();
   }
-  sliderCont.style.transform = `translateX(-${
-    (itemsWidth + elementMargin * 2) * slidesCount
-  }px)`;
-  console.log(sliderCont);
+}
+function nextInt() {
+    let times = 1
+  if (times !== 3) {
+    sliderCont.style.transform = `translateX(-${
+      (itemsWidth + elementMargin) * slidesCount
+    }px)`;
+  } else {
+    prevInt();
+  }
   slidesCount++;
+  times++
+}
+setInterval(() => {
+  nextInt();
 }, 1000);

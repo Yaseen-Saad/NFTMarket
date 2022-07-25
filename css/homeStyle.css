@@ -50,7 +50,7 @@
 .carousel-slider .item {
   border-radius: 5px;
   margin: 0 15px;
-  width: fit-content;
+  width: 370px;
 }
 .carousel-slider .item .text-box > p:first-child {
   color: var(--light);
