@@ -71,7 +71,6 @@ fetch("JSON/categoriesSliderData.JSON")
       slider.append(slide);
     });
   })
-
 setTimeout(() => {
   let secSlider = document.querySelector(".carousel-slider"),
     items = secSlider.innerHTML,
