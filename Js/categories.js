@@ -19,8 +19,26 @@ fetch("../JSON/categriesData.JSON")
     }
   });
 
-/*<div>
-                <img src="images/icon-01.png" alt="logo">
-                <p>Blockchain</p>
-                <span></span>
-            </div>*/
+let secSlider = document.querySelector(".carousel-slider"),
+  items = secSlider.innerHTML,
+  sliderCont = document.createElement("div"),
+  item = document.querySelectorAll(".carousel-slider .item")[0],
+  itemsMargin = getComputedStyle(item),
+  itemsWidth = item.clientWidth,
+  CurrWidth = itemsWidth;
+secSlider.innerHTML = "";
+sliderCont.innerHTML = items;
+sliderCont.classList.add("Slider-Container");
+secSlider.prepend(sliderCont);
+//.Slider-Container
+let slidesCount = 0;
+console.log(item.style.margin);
+setInterval(() => {
+  if (slidesCount == 3) {
+    clearInterval(1);
+  }
+  sliderCont.style.transform = `translateX(-${itemsWidth}px)`;
+  itemsWidth += CurrWidth;
+  console.log(sliderCont);
+  slidesCount++;
+}, 1000);

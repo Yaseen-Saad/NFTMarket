@@ -1,112 +1,92 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Junked Code*/
-.owl-carousel .item {
+.Slider-Container {
+  display: flex;
+  width: fit-content;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel-slider .item {
   border-radius: 5px;
+  margin: 0 15px;
   width: fit-content;
 }
-.owl-carousel .item .text-box > p:first-child {
+.carousel-slider .item .text-box > p:first-child {
+  color: var(--light);
   font-weight: 900;
 }
-.owl-carousel .item a {
+.carousel-slider .item a {
   display: inline-block;
   text-align: center;
   width: 100%;
   color: var(--light);
+
   margin-top: 20px;
   text-decoration: none;
   background-color: var(--SecoundryColor);
   padding: 5px;
 }
-.owl-carousel .item a:hover {
+.carousel-slider .item a:hover {
   background-color: var(--light);
   color: var(--SecoundryColor);
 }
-.owl-carousel .item .text-box {
+.carousel-slider .item .text-box {
   border: 1px solid #404245;
-
   padding: 30px;
 }
-.owl-carousel .item .text-box section {
+.carousel-slider .item .text-box section {
+  color: var(--light);
   display: flex;
   justify-content: space-between;
 }
-.owl-carousel .item .text-box section .cont p {
+.carousel-slider .item .text-box section .cont p {
+  color: var(--light);
   margin: 0;
 }
-.owl-carousel .item .text-box section .cont:last-child p:last-child {
+.carousel-slider .item .text-box section .cont:last-child p:last-child {
   font-weight: 900;
 }
-.owl-carousel {
+.carousel-slider {
   position: relative;
-}
-.owl-dots {
-  display: flex;
-  width: 100px;
-  margin: auto;
-  justify-content: space-evenly;
-}
-.owl-dots button span {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  background-color: #fff;
-  border-radius: 50%;
-}
-.owl-nav button span {
-  position: absolute;
-  overflow: visible;
-  color: var(--SecoundryColor);
-  top: 50%;
-  background-color: rgb(0, 0, 0);
-  opacity: 0.6;
-  font-size: 1.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  transform: translateY(-70%);
-}
-.owl-nav button:first-child span {
-  left: 5px;
-}
-.owl-nav button:last-child span {
-  right: 5px;
 }
