@@ -40,28 +40,35 @@ sliderCont.innerHTML = items;
 sliderCont.classList.add("Slider-Container");
 secSlider.prepend(sliderCont);
 //.Slider-Container
-function prevInt() {
-  if (slidesCount === 0) {
-    sliderCont.style.transform = `translateX(-${
-      (itemsWidth + elementMargin) * slidesCount
-    }px)`;
-    slidesCount--;
-  } else {
-    nextInt();
-  }
-}
+console.log(elementMargin);
+let intervalNext;
+let intarvalPrev;
 function nextInt() {
-    let times = 1
-  if (times !== 3) {
+  intervalNext = setInterval(() => {
+  sliderCont.style.transform = `translateX(-${
+    (itemsWidth + elementMargin) * slidesCount
+  }px)`;
+  console.log(sliderCont);
+  slidesCount++;
+}, 1000);
+}
+function prevInt(){
+  intarvalPrev = setInterval(() => {
+    slidesCount--;
     sliderCont.style.transform = `translateX(-${
       (itemsWidth + elementMargin) * slidesCount
     }px)`;
-  } else {
-    prevInt();
-  }
-  slidesCount++;
-  times++
+    console.log(sliderCont);
+  }, 1000);
 }
-setInterval(() => {
-  nextInt();
-}, 1000);
+sliderCont.addEventListener("transitionend",() => {
+  if (slidesCount == 4) {
+    clearInterval(intervalNext);
+    prevInt()
+  }
+  if(sliderCont == 0){
+    clearInterval(intarvalPrev);
+    nextInt()
+  }
+})
+nextInt()
