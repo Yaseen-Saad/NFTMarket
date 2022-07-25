@@ -151,6 +151,7 @@
   border: none;
   outline: none;
   margin: 0 10px;
+  cursor: pointer;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .landing .landing-content {

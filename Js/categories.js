@@ -65,7 +65,7 @@ sliderCont.addEventListener("transitionend", () => {
     clearInterval(intervalNext);
     prevInt();
   }
-  if (sliderCont == 0) {
+  if(slidesCount == 0){
     clearInterval(intarvalPrev);
     nextInt();
   }
