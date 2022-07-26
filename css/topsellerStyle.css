@@ -13,7 +13,7 @@
 }
 .seller-container{
     width: 100%;
-    height: 65%;
+    height: 75%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -23,8 +23,6 @@
     margin-bottom: 100px;
 }
 .seller-container article{
-    width: 23%;
-    height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;

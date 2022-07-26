@@ -2,6 +2,11 @@ let contSeller = document.querySelector(".seller-container")
 fetch("../Json/topSellers.json")
 .then((response) => response.json())
 .then((data) => {
+    dataLength = data.length
+    dataLengths = dataLength / 4;
+    if(dataLength % 4 !== 0 ){
+        dataLengths = Math.ceil(dataLengths)
+    }
     data.forEach(e => {
         let article = document.createElement("article")
         let h3 = document.createElement("h3")
@@ -19,6 +24,11 @@ fetch("../Json/topSellers.json")
         article.append(h3)
         article.append(img)
         article.append(h4)
+        console.log(dataLengths)
+        article.style.cssText = `
+        width:${23}%;
+        height:${(100 - 10) / dataLengths}%;
+        `
         contSeller.append(article)
     })
 })
