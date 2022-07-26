@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="./css/mainStyle.css">
         <!-- Pre LoadvStyle -->
         <link rel="stylesheet" href="./css/preLoad.css">
+        <!-- top seller css -->
+        <link rel="stylesheet" href="./css/topsellerStyle.css">
 </head>
 <body>
     <!-- Preload Section -->
@@ -57,7 +59,7 @@
         <!-- End Nav -->
         <!-- Top Seller -->
         <section class="top-seller">
-            <h3>Our Top Sellers This Week</h3>
+            <h3>Our Top Sellers This Week.</h3>
             <div class="seller-container">
 
                 <!-- don't Edit Here (Data From JSON File) -->
@@ -65,9 +67,22 @@
             </div>
         </section>
         <!-- End Top Seller -->
+        <!-- fontawesome JS -->
+        <script src="fontawsome/all.min.js"></script>
+        <script>
+            // Nav
+            let toggler = document.querySelector( ".toggler" );
+            let ul = document.querySelector( "header > ul" );
+            toggler.onclick = () => {
+                ul.classList.toggle( "active" );
+                toggler.classList.toggle( "active" );
+            }
+        </script>
         <!-- To Top JS -->
         <script src="Js/toTop.js"></script>
         <!-- Pre Load JS -->
         <script src="Js/preLoad.js"></script>
+        <!-- top seller Js -->
+        <script src="Js/topseller.js"></script>
 </body>
 </html>
