@@ -15,23 +15,26 @@
   --black: #000;
   --SecoundryColor: #7453fc;
 }
-body{
+body {
   background-color: var(--mainColor);
 }
 /* ScrollToTop */
 .ToTop {
-  width: 60px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 80px;
-  right: -60px;
-  transition: 0.3s ease-in-out;
-  padding: 5px 10px;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
   color: var(--light);
-  border-radius: 1px;
+  transform: translateY(150%);
+  border-radius: 4px;
   background-color: var(--SecoundryColor);
   cursor: pointer;
+}
+.ToTop.active {
+  transform: translateY(0);
 }

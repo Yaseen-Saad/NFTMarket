@@ -23,12 +23,12 @@ textTile1.innerText = "Set Up Your Wallet";
 desc1.innerText =
   "NFT means Non-Fungible Token that are used in digital cryptocurrency markets. There are many different kinds of NFTs in the industry.";
 //=======================//
-img2.src = "images/icon-02.png";
+img2.src = "images/icon-03.png";
 textTile2.innerText = "Add Your Digital NFT";
 desc2.innerText =
   "There are 5 different HTML pages included in this NFT website template. You can edit or modify any section on any page as you required.  ";
 //=======================//
-img3.src = "images/icon-02.png";
+img3.src = "images/icon-04.png";
 textTile3.innerText = "Sell Your NFT & Make Profit";
 desc3.innerText =
   "If you would like to support our TemplateMo website, please visit our contact page to make a PayPal contribution. Thank you.";
