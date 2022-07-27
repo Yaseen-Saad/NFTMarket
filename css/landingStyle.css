@@ -6,7 +6,7 @@
   background-image: url(../images/banner-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 100px var(--mainPadding) 0;
+  padding: 160px var(--mainPadding) 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,6 +27,7 @@
   transform: translateY(56px);
 }
 .landing .landing-content h2 {
+  margin-top: 40px;
   color: white;
   font-size: 3em;
   line-height: 55px;
@@ -194,7 +195,7 @@
   .landing .landing-content {
     padding: 0 0 0 20px;
     width: 82%;
-    margin-top: 15px;
+    margin-top: 50px;
   }
   .landing .landing-content h2 {
     font-size: 1.7em;
