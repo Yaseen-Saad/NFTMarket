@@ -26,7 +26,6 @@ fetch("../Json/topSellers.json")
         article.append(h4)
         console.log(dataLengths)
         article.style.cssText = `
-        width:${23}%;
         height:${(100 - 10) / dataLengths}%;
         `
         contSeller.append(article)
