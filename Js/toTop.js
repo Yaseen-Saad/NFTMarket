@@ -11,9 +11,9 @@ document.body.append(scrollToTop);
 // Adding Events
 scrollToTop.onclick = () => scrollTo({ top: 0, behavior: "smooth" });
 window.addEventListener("scroll", () => {
-  if (scrollY + window.innerHeight === document.documentElement.scrollHeight) {
-    scrollToTop.style.right = "0";
+  if (scrollY >= 1000 || pageYOffset >= 1000) {
+    scrollToTop.classList.add('active')
   } else {
-    scrollToTop.style.right = "-60px";
+    scrollToTop.classList.remove('active')
   }
 });
