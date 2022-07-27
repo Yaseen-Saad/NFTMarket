@@ -1,4 +1,4 @@
-let categories = document.querySelector(".categories > div");
+let categories = document.querySelector(".categories .data");
 fetch("../Json/categriesData.JSON")
   .then((response) => response.json())
   .then((data) => {
@@ -70,13 +70,13 @@ fetch("../Json/categoriesSliderData.JSON")
     });
   });
 
-setTimeout(() => {
+  setTimeout(() => {
   let secSlider = document.querySelector(".carousel-slider"),
-    items = secSlider.innerHTML,
-    sliderCont = document.createElement("div"),
-    item = document.querySelectorAll(".carousel-slider .item "),
-    itemsWidth = item[0].clientWidth,
-    elementMargin =
+  items = secSlider.innerHTML,
+  sliderCont = document.createElement("div"),
+  item = document.querySelectorAll(".carousel-slider .item "),
+  itemsWidth = item[0].clientWidth,
+  elementMargin =
       parseInt(
         window
           .getComputedStyle(
@@ -84,6 +84,8 @@ setTimeout(() => {
           )
           .margin.split("px")[1]
       ) * 2,
+
+
     slidesCount = 1;
   CurrWidth = itemsWidth;
   secSlider.innerHTML = "";
@@ -98,7 +100,7 @@ setTimeout(() => {
         (itemsWidth + elementMargin) * slidesCount
       }px)`;
       slidesCount++;
-    }, 4000);
+    }, 3000);
   }
   function prevInt() {
     intarvalPrev = setInterval(() => {
@@ -106,10 +108,12 @@ setTimeout(() => {
       sliderCont.style.transform = `translateX(-${
         (itemsWidth + elementMargin) * slidesCount
       }px)`;
-    }, 4000);
+    }, 3000);
   }
   sliderCont.addEventListener("transitionend", () => {
-    if (slidesCount == 4) {
+    let item = document.querySelectorAll(".carousel-slider .item ")
+    if(item[0].clientWidth === 370){
+      if (slidesCount == 2) {
       clearInterval(intervalNext);
       prevInt();
     }
@@ -117,6 +121,27 @@ setTimeout(() => {
       clearInterval(intarvalPrev);
       nextInt();
     }
+    }
+    if(item[0].clientWidth === 410){
+      if (slidesCount == 3) {
+      clearInterval(intervalNext);
+      prevInt();
+    }
+    if (slidesCount == 0) {
+      clearInterval(intarvalPrev);
+      nextInt();
+    }
+    }
+    if(item[0].clientWidth === 450 || item[0].clientWidth === 450 ){
+      if (slidesCount == 4) {
+      clearInterval(intervalNext);
+      prevInt();
+    }
+    if (slidesCount == 0) {
+      clearInterval(intarvalPrev);
+      nextInt();
+    }
+    }
   });
   nextInt();
-}, 2000);
+}, 1000);
