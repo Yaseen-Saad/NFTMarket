@@ -2,7 +2,7 @@
   width: 100vw;
   background-image: url(../images/main-bg.jpg);
   background-size: cover;
-  padding: 10px var(--mainPadding);
+  padding: 20px var(--mainPadding) 80px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

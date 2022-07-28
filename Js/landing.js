@@ -34,11 +34,11 @@ const startSlide = () => {
 slide.addEventListener("transitionend",() => {
     // To make sure that the append of the cloned img is happend 
     slides = document.querySelectorAll(".slide")
-    if(slides[index].id === firstClone.id){
+    if(slides[index].getAttribute("id") === firstClone.id){
         slide.style.transition = "none"
         index = 1;
         slide.style.transform = `translateX(${-slideWidth * index}px)`
-    }else if(slides[index].id === lastClone.id){
+    }else if(slides[index].getAttribute("id") === lastClone.id){
         slide.style.transition = "none"
         index = 4;
         slide.style.transform = `translateX(${-slideWidth * index}px)`

@@ -70,6 +70,7 @@
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 20px 15px;
   color: #fff;
+  margin:  50px 60px ;
 }
 .categories > div:first-of-type > div {
   display: flex;
