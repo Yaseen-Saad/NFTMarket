@@ -4,31 +4,31 @@ let main_cont = document.querySelector(".createYourNFT"),
   title = document.createElement("h2"),
   link = document.createElement("a"),
   textCont1 = document.createElement("div"),
-  img1 = document.createElement("img"),
+  img1 = document.createElement("div"),
   textTile1 = document.createElement("p"),
   desc1 = document.createElement("p"),
   textCont2 = document.createElement("div"),
-  img2 = document.createElement("img"),
+  img2 = document.createElement("div"),
   textTile2 = document.createElement("p"),
   desc2 = document.createElement("p"),
   textCont3 = document.createElement("div"),
-  img3 = document.createElement("img"),
+  img3 = document.createElement("div"),
   textTile3 = document.createElement("p"),
   desc3 = document.createElement("p");
 //Adding Text
 title.innerText = "Create Your NFT & Put It On The Market.";
 link.innerText = "Create Your NFT Now";
-img1.src = "images/icon-02.png";
+img1.style.backgroundImage = "url(images/icon-02.png)";
 textTile1.innerText = "Set Up Your Wallet";
 desc1.innerText =
   "NFT means Non-Fungible Token that are used in digital cryptocurrency markets. There are many different kinds of NFTs in the industry.";
 //=======================//
-img2.src = "images/icon-03.png";
+img2.style.backgroundImage = "url(images/icon-04.png)";
 textTile2.innerText = "Add Your Digital NFT";
 desc2.innerText =
   "There are 5 different HTML pages included in this NFT website template. You can edit or modify any section on any page as you required.  ";
 //=======================//
-img3.src = "images/icon-04.png";
+img3.style.backgroundImage = "url(images/icon-01.png)";
 textTile3.innerText = "Sell Your NFT & Make Profit";
 desc3.innerText =
   "If you would like to support our TemplateMo website, please visit our contact page to make a PayPal contribution. Thank you.";
