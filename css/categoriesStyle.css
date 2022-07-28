@@ -117,24 +117,3 @@
 .categories > div:first-of-type > div:hover > span:last-child {
   opacity: 1;
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  .carousel-slider .item {
-    border-radius: 5px;
-    margin: 0 13px;
-    width: 410px;
-  }
-}
-@media (min-width: 413px) and (max-width: 767px) {
-  .carousel-slider .item {
-    border-radius: 5px;
-    margin: 0 100px;
-    width: 450px;
-  }
-}
-@media (max-width: 412px) {
-  .carousel-slider .item {
-    border-radius: 5px;
-    margin: 0 0px;
-    width: 400px;
-  }
-}

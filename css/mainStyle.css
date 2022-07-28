@@ -16,7 +16,7 @@
   --SecoundryColor: #7453fc;
 }
 body {
-  background-color: var(--mainColor);
+  margin: 0;
 }
 /* ScrollToTop */
 .ToTop {
