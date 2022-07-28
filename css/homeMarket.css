@@ -66,6 +66,8 @@
 #home-market .market-content {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 30px;
 }
 
 #home-market .market-content .item {
@@ -85,6 +87,16 @@
 		"nft-img . bid deadline deadline"
 		"nft-img . bid deadline deadline"
 		"nft-img . details-link details-link details-link";
+}
+
+@media (max-width: 991px) {
+	#home-market .market-content {
+		justify-content: center;
+	}
+
+	#home-market .market-content .item {
+		flex-basis: 90%;
+	}
 }
 
 #home-market .market-content .item .nft-img {

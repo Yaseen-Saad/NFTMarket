@@ -34,7 +34,6 @@ const startSlide = () => {
 slide.addEventListener("transitionend",() => {
     // To make sure that the append of the cloned img is happend 
     slides = document.querySelectorAll(".slide")
-    
     if(slides[index].id === firstClone.id){
         slide.style.transition = "none"
         index = 1;

@@ -1,10 +1,11 @@
 [
 	{
-		"image": "images/market-01.jpg",
+		"nftImage": "images/market-01.jpg",
 		"keyWord": "music",
 		"title": "Music Art Super Item",
 		"artistName": "Liberty Artist",
 		"artistAccount": "@libertyart",
+		"artistAccountPage": "#",
 		"artistPic": "images/author.jpg",
 		"bid": 2.03,
 		"price": 8240.5,
@@ -12,11 +13,12 @@
 		"details": "#"
 	},
 	{
-		"image": "images/market-01.jpg",
+		"nftImage": "images/market-01.jpg",
 		"keyWord": "music",
 		"title": "Blockchain Music Design",
 		"artistName": "Liberty Artist",
 		"artistAccount": "@libertyart",
+		"artistAccountPage": "#",
 		"artistPic": "images/author.jpg",
 		"bid": 2.44,
 		"price": 8200.5,
@@ -24,11 +26,12 @@
 		"details": "#"
 	},
 	{
-		"image": "images/market-01.jpg",
+		"nftImage": "images/market-01.jpg",
 		"keyWord": "digital",
 		"title": "Digital Crypto Artwork",
 		"artistName": "Liberty Artist",
 		"artistAccount": "@libertyart",
+		"artistAccountPage": "#",
 		"artistPic": "images/author.jpg",
 		"bid": 2.03,
 		"price": 7200.5,
@@ -36,11 +39,12 @@
 		"details": "#"
 	},
 	{
-		"image": "images/market-01.jpg",
+		"nftImage": "images/market-01.jpg",
 		"keyWord": "digital",
 		"title": "Digital Art Item",
 		"artistName": "Liberty Artist",
 		"artistAccount": "@libertyart",
+		"artistAccountPage": "#",
 		"artistPic": "images/author.jpg",
 		"bid": 2.5,
 		"price": 8400.5,
@@ -48,11 +52,12 @@
 		"details": "#"
 	},
 	{
-		"image": "images/market-01.jpg",
+		"nftImage": "images/market-01.jpg",
 		"keyWord": "Block",
 		"title": "Blockchain Item One",
 		"artistName": "Liberty Artist",
 		"artistAccount": "@libertyart",
+		"artistAccountPage": "#",
 		"artistPic": "images/author.jpg",
 		"bid": 3.64,
 		"price": 6600.0,
@@ -60,11 +65,12 @@
 		"details": "#"
 	},
 	{
-		"image": "images/market-01.jpg",
+		"nftImage": "images/market-01.jpg",
 		"keyWord": "Block",
 		"title": "Blockchain Music Design",
 		"artistName": "Liberty Artist",
 		"artistAccount": "@libertyart",
+		"artistAccountPage": "#",
 		"artistPic": "images/author.jpg",
 		"bid": 2.44,
 		"price": 8200.5,

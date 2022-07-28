@@ -1,3 +1,64 @@
+.categories > h2 {
+	margin: auto;
+	width: fit-content;
+	margin-bottom: 40px;
+	color: #fff;
+	font-size: 3.4vw;
+}
+.categories > h2 > span {
+	font-size: 4vw;
+	color: var(--secondaryColor);
+}
+.Slider-Container {
+	display: flex;
+	width: fit-content;
+}
+.carousel-slider .item {
+	border-radius: 5px;
+	margin: 0 15px;
+	width: 370px;
+}
+.carousel-slider .item .text-box > p:first-child {
+	color: var(--light);
+	font-weight: 900;
+}
+.carousel-slider .item img {
+	width: 100%;
+}
+.carousel-slider .item a {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	color: var(--light);
+
+	margin-top: 20px;
+	text-decoration: none;
+	background-color: var(--secondaryColor);
+	padding: 5px;
+}
+.carousel-slider .item a:hover {
+	background-color: var(--light);
+	color: var(--secondaryColor);
+}
+.carousel-slider .item .text-box {
+	border: 1px solid #404245;
+	padding: 30px;
+}
+.carousel-slider .item .text-box section {
+	color: var(--light);
+	display: flex;
+	justify-content: space-between;
+}
+.carousel-slider .item .text-box section .cont p {
+	color: var(--light);
+	margin: 0;
+}
+.carousel-slider .item .text-box section .cont:last-child p:last-child {
+	font-weight: 900;
+}
+.carousel-slider {
+	position: relative;
+}
 .categories {
 	background-image: url(.././images/dark-bg.jpg);
 	padding: var(--mainPadding);
@@ -5,6 +66,7 @@
 .categories > div:first-of-type {
 	display: grid;
 	width: 100%;
+	margin-bottom: 40px;
 	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 	gap: 20px 15px;
 	color: #fff;
@@ -22,13 +84,16 @@
 	margin-bottom: 10px;
 }
 .categories > div:first-of-type > div p {
+	z-index: 3;
 	margin: 0 0 20px 0;
 }
 .categories > div:first-of-type > div > span:last-child {
 	position: absolute;
 	width: 30px;
 	height: 30px;
+	overflow: hidden;
 	border-radius: 50%;
+	z-index: 2;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -46,6 +111,30 @@
 	background-color: var(--secondaryColor);
 	color: #fff;
 }
+.categories > div:first-of-type > div:hover {
+	transform: translateY(-10px) scale(1.1);
+}
 .categories > div:first-of-type > div:hover > span:last-child {
 	opacity: 1;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.carousel-slider .item {
+		border-radius: 5px;
+		margin: 0 13px;
+		width: 410px;
+	}
+}
+@media (min-width: 413px) and (max-width: 767px) {
+	.carousel-slider .item {
+		border-radius: 5px;
+		margin: 0 100px;
+		width: 450px;
+	}
+}
+@media (max-width: 412px) {
+	.carousel-slider .item {
+		border-radius: 5px;
+		margin: 0 0px;
+		width: 400px;
+	}
 }

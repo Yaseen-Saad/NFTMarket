@@ -12,8 +12,8 @@ document.body.append(scrollToTop);
 scrollToTop.onclick = () => scrollTo({ top: 0, behavior: "smooth" });
 window.addEventListener("scroll", () => {
   if (scrollY >= 1000 || pageYOffset >= 1000) {
-    scrollToTop.style.transform = "translateY(0)";
+    scrollToTop.classList.add('active')
   } else {
-    scrollToTop.style.transform = "translateY(200px)";
+    scrollToTop.classList.remove('active')
   }
 });
