@@ -71,12 +71,13 @@
 }
 
 #home-market .market-content .item {
+
 	flex-basis: 47%;
 	display: grid;
 	color: white;
 	background-color: var(--mainColor);
-	border: 1px solid #404245;
 	border-radius: 20px;
+	border: 1px solid #404245;
 	padding: 20px;
 	align-items: center;
 	grid-template-columns: 33% 20px 25% 20% 15%;
@@ -102,25 +103,84 @@
 #home-market .market-content .item .nft-img {
 	grid-area: nft-img;
 	max-width: 100%;
+	border-radius: 10px;
 }
 
 #home-market .market-content .item .item-name {
 	margin: 0;
 	grid-area: nft-title;
+	font-size: 20px;
+	font-weight: 700;
 }
 
 #home-market .market-content .item .artist {
 	grid-area: artist;
+	padding: 25px 0;
+	border-bottom: 1px solid #535559;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	column-gap: 15px;
+}
+
+#home-market .market-content .item .artist img {
+	border-radius: 50%;
+}
+
+#home-market .market-content .item .artist .artist-name {
+	font-size: 15px;
+	flex-basis: 70%;
+	margin: 5px 0 0 0;
+	align-self: flex-start;
+}
+
+#home-market .market-content .item .artist .artist-user-name {
+	font-size: 15px;
+	font-weight: 700px;
+	color: var(--secondaryColor);
+	margin: -35px 0 0 65px;
 }
 
 #home-market .market-content .item .bid-section {
 	grid-area: bid;
 }
 
+#home-market .market-content .item .bid-section,
+#home-market .market-content .item .deadline-section {
+	margin: 20px 0;
+}
+
+#home-market .market-content .item .bid-section h6,
+#home-market .market-content .item .bid-section .price {
+	margin: 0;
+	font-size: 15px;
+}
+
+#home-market .market-content .item .bid-section .bid {
+	font-size: 20px;
+	font-weight: 700;
+	margin: 10px 0;
+}
+
 #home-market .market-content .item .deadline-section {
 	grid-area: deadline;
 }
 
+#home-market .market-content .item .deadline-section h6,
+#home-market .market-content .item .deadline-section .date {
+	margin: 0;
+	font-size: 15px;
+}
+
+#home-market .market-content .item .deadline-section .counter {
+	font-size: 20px;
+	font-weight: 700;
+	margin: 10px 0;
+}
+
 #home-market .market-content .item .details-link {
 	grid-area: details-link;
+	font-size: 15px;
+	font-weight: 700;
+	color: var(--secondaryColor);
 }

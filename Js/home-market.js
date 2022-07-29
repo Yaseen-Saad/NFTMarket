@@ -1,28 +1,3 @@
-// home page market navigation
-// get filters list
-const filtersUl = document.querySelector(".filters").children;
-
-// current filter
-let currentFilter = "all-items";
-
-// add an eventListener to all filters
-for (let filter of filtersUl) {
-	filter.addEventListener("click", () => {
-		// call function to change the active filter
-		changeActive(filter);
-	});
-}
-
-function changeActive(filter) {
-	for (let filter of filtersUl) {
-		// delete active class from all elements
-		filter.classList.remove("active");
-	}
-	// add active to the current tag
-	filter.classList.add("active");
-	currentFilter = filter.getAttribute("data-tag");
-}
-
 // Get The Container
 const contentDiv = document.getElementById("market-content");
 // Get The Data
@@ -77,7 +52,7 @@ fetch("../Json/homeMarketData.JSON")
 			const artistUserNameA = document.createElement("a");
 			artistUserNameA.classList.add("artist-user-name");
 			artistUserNameA.setAttribute("href", `${item.artistAccountPage}`);
-			artistUserNameA.textContent = item.artistAccount;
+			artistUserNameA.textContent = `@${item.artistAccount}`;
 			// append user name
 			artistDiv.appendChild(artistUserNameA);
 
@@ -89,7 +64,7 @@ fetch("../Json/homeMarketData.JSON")
 
 			// current bid h6 and text content
 			const bidH6 = document.createElement("h6");
-			bidH6.textContent = "Current Bid:";
+			bidH6.textContent = "Current Bid";
 			// append bid h6
 			bidDiv.appendChild(bidH6);
 
@@ -103,7 +78,7 @@ fetch("../Json/homeMarketData.JSON")
 			// price p and class and text content
 			const priceP = document.createElement("p");
 			priceP.classList.add("price");
-			priceP.textContent = `(${item.price})`;
+			priceP.textContent = `($${item.price})`;
 			// append price p
 			bidDiv.appendChild(priceP);
 
@@ -115,20 +90,20 @@ fetch("../Json/homeMarketData.JSON")
 
 			// deadline h6 and text content
 			const deadlineH6 = document.createElement("h6");
-			deadlineH6.textContent = "Ends In:";
+			deadlineH6.textContent = "Ends In";
 			// append deadline h6
 			deadlineDiv.append(deadlineH6);
 
 			// counter p and class and text content
 			const counterP = document.createElement("p");
-			counterP.classList.add("bid");
+			counterP.classList.add("counter");
 			counterP.textContent = item.deadLine;
 			// append counter p
 			deadlineDiv.appendChild(counterP);
 
 			// date p and class and text content
 			const dateP = document.createElement("p");
-			dateP.classList.add("price");
+			dateP.classList.add("date");
 			dateP.textContent = item.deadLine;
 			// append date p
 			deadlineDiv.appendChild(dateP);
@@ -142,3 +117,43 @@ fetch("../Json/homeMarketData.JSON")
 			itemDiv.appendChild(detailsA);
 		}
 	}));
+
+
+// home page market navigation
+// get filters list
+const filtersUl = document.querySelector(".filters").children;
+
+// current filter
+let currentFilter = "all-items";
+
+// add an eventListener to all filters
+for (let filter of filtersUl) {
+	filter.addEventListener("click", () => {
+		// call function to change the active filter
+		changeActive(filter);
+		hideAndShowItems(filter.getAttribute("data-tag"));
+	});
+}
+
+function changeActive(filter) {
+	for (let filter of filtersUl) {
+		// delete active class from all elements
+		filter.classList.remove("active");
+	}
+	// add active to the current tag
+	filter.classList.add("active");
+	currentFilter = filter.getAttribute("data-tag");
+}
+
+function hideAndShowItems(tag) {
+	const items = contentDiv.children;
+	for (const item of items) {
+		if (tag === "all-items") {
+			item.style.display = "grid";
+		} else if (item.getAttribute("data-tag") === tag) {
+			item.style.display = "grid";
+		} else {
+			item.style.display = "none";
+		}
+	}
+}
