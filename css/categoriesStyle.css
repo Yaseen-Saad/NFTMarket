@@ -1,11 +1,11 @@
-.categories > h2 {
+.categories>h2 {
   margin: auto;
   width: fit-content;
   margin-bottom: 40px;
   color: #fff;
   font-size: 3.4vw;
 }
-.categories > h2 > span {
+.categories>h2>span {
   font-size: 4vw;
   color: var(--SecoundryColor);
 }
@@ -18,7 +18,7 @@
   margin: 0 15px;
   width: 370px;
 }
-.carousel-slider .item .text-box > p:first-child {
+.carousel-slider .item .text-box>p:first-child {
   color: var(--light);
   font-weight: 900;
 }
@@ -30,7 +30,6 @@
   text-align: center;
   width: 100%;
   color: var(--light);
-
   margin-top: 20px;
   text-decoration: none;
   background-color: var(--SecoundryColor);
@@ -63,15 +62,16 @@
   background-image: url(.././images/dark-bg.jpg);
   padding: var(--mainPadding);
 }
-.categories > div:first-of-type {
+.categories>div:first-of-type {
   display: grid;
   width: 100%;
   margin-bottom: 40px;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 20px 15px;
   color: #fff;
+  margin: 50px 60px;
 }
-.categories > div:first-of-type > div {
+.categories>div:first-of-type>div {
   display: flex;
   position: relative;
   height: 100px;
@@ -83,11 +83,11 @@
   overflow: visible;
   margin-bottom: 10px;
 }
-.categories > div:first-of-type > div p {
+.categories>div:first-of-type>div p {
   z-index: 3;
   margin: 0 0 20px 0;
 }
-.categories > div:first-of-type > div > span:last-child {
+.categories>div:first-of-type>div>span:last-child {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -104,16 +104,37 @@
   opacity: 0;
   z-index: 3;
 }
-.categories > div:first-of-type > div > span:last-child :not(object) {
+.categories>div:first-of-type>div>span:last-child :not(object) {
   transition: 0.1s cubic-bezier(0, 2.84, 0.7, 1.71);
 }
-.categories > div:first-of-type > div > span:last-child:hover {
+.categories>div:first-of-type>div>span:last-child:hover {
   background-color: var(--SecoundryColor);
   color: #fff;
 }
-.categories > div:first-of-type > div:hover {
+.categories>div:first-of-type>div:hover {
   transform: translateY(-10px) scale(1.1);
 }
-.categories > div:first-of-type > div:hover > span:last-child {
+.categories>div:first-of-type>div:hover>span:last-child {
   opacity: 1;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-slider .item {
+    border-radius: 5px;
+    margin: 0 13px;
+    width: 410px;
+  }
+}
+@media (min-width: 413px) and (max-width: 767px) {
+  .carousel-slider .item {
+    border-radius: 5px;
+    margin: 0 100px;
+    width: 450px;
+  }
+}
+@media (max-width: 412px) {
+  .carousel-slider .item {
+    border-radius: 5px;
+    margin: 0 0px;
+    width: 400px;
+  }
 }
