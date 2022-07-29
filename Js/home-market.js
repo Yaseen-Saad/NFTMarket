@@ -104,7 +104,7 @@ fetch("../Json/homeMarketData.JSON")
 			// date p and class and text content
 			const dateP = document.createElement("p");
 			dateP.classList.add("date");
-			dateP.textContent = item.deadLine;
+			dateP.textContent = validateDate(item.deadLine);
 			// append date p
 			deadlineDiv.appendChild(dateP);
 
@@ -156,4 +156,40 @@ function hideAndShowItems(tag) {
 			item.style.display = "none";
 		}
 	}
+}
+
+// console.log(new Date("Dec 1, 2022").getTime());
+
+function validateDate(date) {
+
+	let day = date.slice(0, date.indexOf("/"));
+	// validate day
+	if (day.length == 1 || day.length == 2 && day < 21) {
+		if (day == 1) {
+			day = `${day}st`;
+		} else if (day == 2) {
+			day = `${day}nd`;
+		} else if (day == 3) {
+			day = `${day}rd`;
+		} else {
+			day = `${day}th`;
+		}
+	} else if (day.length == 2 && day >= 20) {
+		if (day.charAt(1) == 1) {
+			day = `${day}st`;
+		} else if (day.charAt(1) == 2) {
+			day = `${day}nd`;
+		} else if (day.charAt(1) == 3) {
+			day = `${day}rd`;
+		} else {
+			day = `${day}th`;
+		}
+	}
+
+	let month = date.slice(date.indexOf("/") + 1, date.lastIndexOf("/"));
+	let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+	let year = date.slice(date.lastIndexOf("/") + 1);
+
+	return `(${months[month - 1]} ${day}, ${year})`;
 }
