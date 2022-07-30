@@ -16,7 +16,8 @@ const lastClone = slides[slides.length - 1].cloneNode(true)
 firstClone.id = "first-clone"
 lastClone.id = "last-clone"
 // append the cloned img
-
+slide.append(firstClone);
+slide.prepend(lastClone);
 // git the width of the slide
 const slideWidth = slides[index].clientWidth;
 // move the slide to left by using the index * width of slide 
