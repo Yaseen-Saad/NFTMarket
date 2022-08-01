@@ -18,6 +18,8 @@ fetch("../Json/categriesData.JSON")
       categories.prepend(parent);
     }
   });
+  let container = document.createElement("div");
+  container.classList.add("Slider-Container")
 fetch("../Json/categoriesSliderData.JSON")
   .then((response) => response.json())
   .then((data) => {
@@ -66,82 +68,102 @@ fetch("../Json/categoriesSliderData.JSON")
       slide.append(img);
       txtBox.append(link);
       slide.append(txtBox);
-      slider.append(slide);
+      container.append(slide)
+      slider.prepend(container);
     });
   });
 
-  setTimeout(() => {
-  let secSlider = document.querySelector(".carousel-slider"),
-  items = secSlider.innerHTML,
-  sliderCont = document.createElement("div"),
-  item = document.querySelectorAll(".carousel-slider .item "),
-  itemsWidth = item[0].clientWidth,
-  elementMargin =
+setTimeout(() => {
+  let slideContainer = document.querySelector(".carousel-slider"),
+  slide = document.querySelector(".carousel-slider > div"),
+  slides = document.querySelectorAll(".carousel-slider div .item ")
+
+const nextBtn = document.querySelector(".control button:nth-child(2)")
+const prevBtn = document.querySelector(".control button:nth-child(1)")
+const interval = 6000;
+// declar the dynamic variable of DOM 
+// let slides = document.querySelectorAll(".slide")
+let index = 1;
+let slidId;
+//create The Colne of the First and last img in the slider
+const firstClone = slides[0].cloneNode(true)
+const lastClone = slides[slides.length - 1].cloneNode(true)
+// add id to the cloned img to mark them
+firstClone.id = "first-clone"
+lastClone.id = "last-clone"
+// append the cloned img
+slide.append(firstClone);
+slide.prepend(lastClone);
+// git the width of the slide
+let = itemsWidth = slides[index].clientWidth,
+      elementMargin =
       parseInt(
         window
           .getComputedStyle(
             document.querySelector(".carousel-slider .item:first-child ")
           )
           .margin.split("px")[1]
-      ) * 2,
+      ) * 2
+const slideWidth = itemsWidth + elementMargin;
+// move the slide to left by using the index * width of slide 
+slide.style.transform = `translateX(${-slideWidth * index}px)`
+// function to start sliding
+const startSlide = () => {
+    slidId = setInterval(() => {
+    slides = document.querySelectorAll(".carousel-slider div .item ")
+    if(index >= slides.length - 1) return;
+        index++;
+        slide.style.transform = `translateX(${-slideWidth * index}px)`
+        slide.style.transition = "0.3s"
+    },interval)
+}
+//to make sure that the slide finish to repeat
+slide.addEventListener("transitionend",() => {
+    // To make sure that the append of the cloned img is happend 
+    slides = document.querySelectorAll(".slide")
+    if(slides[index].getAttribute("id") === firstClone.id){
+        slide.style.transition = "none"
+        index = 1;
+        slide.style.transform = `translateX(${-slideWidth * index}px)`
+    }else if(slides[index].getAttribute("id") === lastClone.id){
+        slide.style.transition = "none"
+        index = 4;
+        slide.style.transform = `translateX(${-slideWidth * index}px)`
+    }
+})
+// make a clear of the interval in mouse in
+slideContainer.addEventListener("mouseenter",() => {
+    clearInterval(slidId)
+})
+// call the start slide function when mouse out 
+slideContainer.addEventListener("mouseleave",startSlide);
+// git the next img 
+nextBtn.onclick = () => {
+    // To prevent an error when pressing quickly
+    slides = document.querySelectorAll(".slide")
+    if(index >= slides.length - 1) return;
 
 
-    slidesCount = 1;
-  CurrWidth = itemsWidth;
-  secSlider.innerHTML = "";
-  sliderCont.innerHTML = items;
-  sliderCont.classList.add("Slider-Container");
-  secSlider.prepend(sliderCont);
-  let intervalNext;
-  let intarvalPrev;
-  function nextInt() {
-    intervalNext = setInterval(() => {
-      sliderCont.style.transform = `translateX(-${
-        (itemsWidth + elementMargin) * slidesCount
-      }px)`;
-      slidesCount++;
-    }, 3000);
-  }
-  function prevInt() {
-    intarvalPrev = setInterval(() => {
-      slidesCount--;
-      sliderCont.style.transform = `translateX(-${
-        (itemsWidth + elementMargin) * slidesCount
-      }px)`;
-    }, 3000);
-  }
-  sliderCont.addEventListener("transitionend", () => {
-    let item = document.querySelectorAll(".carousel-slider .item ")
-    if(item[0].clientWidth === 370){
-      if (slidesCount == 2) {
-      clearInterval(intervalNext);
-      prevInt();
-    }
-    if (slidesCount == 0) {
-      clearInterval(intarvalPrev);
-      nextInt();
-    }
-    }
-    if(item[0].clientWidth === 410){
-      if (slidesCount == 3) {
-      clearInterval(intervalNext);
-      prevInt();
-    }
-    if (slidesCount == 0) {
-      clearInterval(intarvalPrev);
-      nextInt();
-    }
-    }
-    if(item[0].clientWidth === 450 || item[0].clientWidth === 450 ){
-      if (slidesCount == 4) {
-      clearInterval(intervalNext);
-      prevInt();
-    }
-    if (slidesCount == 0) {
-      clearInterval(intarvalPrev);
-      nextInt();
-    }
-    }
-  });
-  nextInt();
-}, 1000);
+    index++;
+    slide.style.transition = "0.3s"
+    slide.style.transform = `translateX(${-slideWidth * index}px)`
+}
+// git the previous img
+prevBtn.onclick = () => {
+    // To prevent an error when pressing quickly
+    if(index <= 0) return;
+
+    index--;
+    slide.style.transition = "0.3s"
+    slide.style.transform = `translateX(${-slideWidth * index}px)`
+}
+nextBtn.addEventListener("mouseenter",() => {
+    clearInterval(slidId)
+})
+prevBtn.addEventListener("mouseenter",() => {
+    clearInterval(slidId)
+})
+nextBtn.addEventListener("mouseleave",startSlide)
+prevBtn.addEventListener("mouseleave",startSlide)
+startSlide()
+},3000)
