@@ -88,12 +88,20 @@ let slidId;
 //create The Colne of the First and last img in the slider
 const firstClone = slides[0].cloneNode(true)
 const lastClone = slides[slides.length - 1].cloneNode(true)
+const secClone = slides[1].cloneNode(true)
+const lastsecClone = slides[slides.length - 2].cloneNode(true)
+const thirClone = slides[2].cloneNode(true)
+const lastthirClone = slides[slides.length - 3].cloneNode(true)
 // add id to the cloned img to mark them
 firstClone.id = "first-clone"
 lastClone.id = "last-clone"
 // append the cloned img
 slide.append(firstClone);
 slide.prepend(lastClone);
+slide.append(secClone);
+slide.prepend(lastsecClone);
+slide.append(thirClone);
+slide.prepend(lastthirClone);
 // git the width of the slide
 let = itemsWidth = slides[index].clientWidth,
       elementMargin =
