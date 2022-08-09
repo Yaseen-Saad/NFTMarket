@@ -1,5 +1,5 @@
 let categories = document.querySelector(".categories .data");
-fetch("../Json/categriesData.JSON")
+fetch("Json/categriesData.JSON")
   .then((response) => response.json())
   .then((data) => {
     for (let i = 0; i < data.length; i++) {
@@ -19,7 +19,7 @@ fetch("../Json/categriesData.JSON")
   });
 let container = document.createElement("div");
 container.classList.add("Slider-Container");
-fetch("../Json/categoriesSliderData.JSON")
+fetch("Json/categoriesSliderData.JSON")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((item) => {
