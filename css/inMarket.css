@@ -1,60 +1,66 @@
-.inMarket > .mainCountainer > .grid {
+.inMarket > .maincContainer > .grid {
   display: grid;
   gap: 10px;
   margin: auto;
+  color: #fff;
   width: fit-content;
   width: -webkit-fit-content;
   grid-template-columns: repeat(2, minmax(320px, 570px));
 }
-.inMarket > .mainCountainer > .grid > .item {
+.inMarket > .maincContainer > .grid > .item {
   background-color: var(--mainColor);
   display: flex;
   color: white;
-  height: 500px;
+  height: 370px;
   border-radius: 4%;
   justify-content: space-between;
   align-items: flex-start;
 }
-.inMarket > .mainCountainer > .grid > .item > * {
+.inMarket > .maincContainer > .grid > .item.dis {
+display: none;
+}
+.inMarket > .maincContainer > .grid > .item > * {
   margin: 25px;
 }
-.inMarket > .mainCountainer > .grid > .item > img {
+.inMarket > .maincContainer > .grid > .item > img {
   border-radius: 10%;
   margin-right: 0;
 }
-.inMarket > .mainCountainer > .grid > .item > .text {
+.inMarket > .maincContainer > .grid > .item > .text {
   height: 90%;
   width: 58%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.inMarket > .mainCountainer > .grid > .item p {
+.inMarket > .maincContainer > .grid > .item p {
   font-size: 1.2rem;
   margin: 0;
 }
-.inMarket > .mainCountainer > .grid > .item > .text > p {
+.inMarket > .maincContainer > .grid > .item > .text > p {
   font-size: 1.7rem;
 }
-.inMarket > .mainCountainer > .grid > .item hr {
+.inMarket > .maincContainer > .grid > .item hr {
   background-color: rgba(255, 255, 255, 0.2);
   width: calc(100% - 25px);
-  margin: -15% 20px 0 0;
+  margin: -18% 20px -10% 0;
   border: 0;
   height: 1px;
 }
-.inMarket > .mainCountainer > .grid > .item > .text img {
+.inMarket > .maincContainer > .grid > .item > .text img {
   border-radius: 50%;
   margin-right: 20px;
 }
-.inMarket > .mainCountainer > .grid > .item > .text > div:first-of-type {
+.inMarket > .maincContainer > .grid > .item > .text > div:first-of-type {
   display: flex;
+  margin-top: -70px;
+  margin-bottom: -30px;
   align-items: center;
   padding-right: 25px;
   justify-content: start;
 }
 .inMarket
-  > .mainCountainer
+  > .maincContainer
   > .grid
   > .item
   > .text
@@ -64,26 +70,60 @@
   margin-top: 7px;
   color: var(--SecoundryColor);
 }
-.inMarket > .mainCountainer > .grid > .item > .text > div:last-of-type {
+.inMarket > .maincContainer > .grid > .item > .text > div:last-of-type {
   display: flex;
+  margin-top: -50px;
   justify-content: space-between;
   padding-right: 25px;
 }
-.inMarket > .mainCountainer > .grid > .item > .text a {
+.inMarket > .maincContainer > .grid > .item > .text a {
   width: calc(100% - 25px);
   background-color: var(--SecoundryColor);
   padding: 10px;
+  margin-top: -70px;
   display: flex;
   justify-content: center;
   color: #fff;
   align-items: center;
 }
 .inMarket
-  > .mainCountainer
+  > .maincContainer
   > .grid
   > .item
   > .text
   > div:last-of-type
   > :last-child {
   text-align: end;
+}
+.inMarket {
+  background-image: url(../images/dark-bg.jpg);
+}
+.inMarket > .maincContainer > .top {
+  color: #fff;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+.inMarket > .maincContainer > .top ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  justify-content: space-evenly;
+}
+.inMarket > .maincContainer > .top ul * {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.inMarket > .maincContainer > .top ul .active {
+  background-color: var(--SecoundryColor);
+}
+.inMarket > .maincContainer > .top > h2 > span {
+  margin: 4px;
+  font-size: 2.2rem;
+  color: var(--SecoundryColor);
 }

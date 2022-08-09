@@ -1,4 +1,4 @@
-let inMarket = document.querySelector(".inMarket > .mainCountainer > .grid");
+let inMarket = document.querySelector(".inMarket > .maincContainer > .grid");
 
 fetch("Json/tagsData.JSON")
   .then((res) => res.json())
@@ -46,8 +46,7 @@ fetch("Json/tagsData.JSON")
       item.classList.toggle("item");
       text.classList.toggle("text");
 
-      //   console.log(ele);
-
+      item.setAttribute("keyword", ele.keyWord);
       //Counter
       //counter Initalizing
       let deadLine = new Date(ele.deadLine).getTime(),
@@ -66,10 +65,13 @@ fetch("Json/tagsData.JSON")
                 minuts >= 10 ? minuts : "0" + minuts
               }M ${Sec >= 10 ? Sec : "0" + Sec}S`;
         counterP.innerText = time;
-        counterCont.innerHTML == "Time Out"?counterCont.style.cssText ="color:#F48989;font-size:2rem;":""
-    }, 1000);
-    counterDeadLine.innerText = ele.deadLine
+        counterCont.innerHTML == "Time Out"
+          ? (counterCont.style.cssText = "color:#F48989;font-size:2rem;")
+          : "";
+      }, 1000);
+      counterDeadLine.innerText = ele.deadLine;
       //Pending
+
       counterCont.prepend(endsIn, counterP, counterDeadLine);
       bidSec.prepend(bid, ETH, price);
       secSecCont.prepend(bidSec, counterCont);
@@ -79,37 +81,28 @@ fetch("Json/tagsData.JSON")
       item.prepend(mainImg, text);
       inMarket.prepend(item);
     });
+  })
+  .then(function () {
+    let items = document.querySelectorAll(
+        ".inMarket > .maincContainer > .grid .item"
+      ),
+      tabs = document.querySelectorAll(
+        ".inMarket > .maincContainer > .top ul li"
+      );
+    tabs.forEach((ele) => {
+      ele.onclick = () => {
+        console.log(123);
+        tabs.forEach((ele) => ele.classList.remove("active"));
+        ele.classList.add("active");
+        items.forEach((item) => {
+          if (ele.getAttribute("keyword") === item.getAttribute("keyword")) {
+            item.classList.remove("dis");
+          } else if (ele.getAttribute("keyword").split(" ").length == 3) {
+            item.classList.remove("dis");
+          } else {
+            item.classList.add("dis");
+          }
+        });
+      };
+    });
   });
-
-/*<div class="item">
-    <img src="images/market-01.jpg" alt="">
-    <div class="text">
-        <p>Music Art Super Item</p>
-        <div>
-            <img src="images/author.jpg" alt="">
-            <div>
-                <p>Liberty Artist</p>
-                <p>@libertyart</p>
-            </div>
-        </div>
-        <hr>
-        <div>
-            <div>
-                <p>Current Bid
-                </p>
-                <p>2.03 ETH
-                </p>
-                <p>($8,240.50)</p>
-            </div>
-            <div>
-                <p>Ends In
-                </p>
-                <p>4D 08H 15M 42S
-                </p>
-                <p>(July 24th, 2022)
-                </p>
-            </div>
-        </div>
-        <a href="">View Item Details</a>
-    </div>
-</div> */
