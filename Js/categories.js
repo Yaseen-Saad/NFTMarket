@@ -44,7 +44,6 @@ fetch("Json/categoriesSliderData.JSON")
       txtBox.classList.add("text-box");
       cont1.classList.add("cont");
       cont2.classList.add("cont");
-      console.log(data);
       // Adding Text
       img.src = item.imgSrc || "images/collection-01.jpg";
       namee.innerText = item.title || "Genesis Collective Statue";

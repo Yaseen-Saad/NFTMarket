@@ -1,0 +1,89 @@
+.inMarket > .mainCountainer > .grid {
+  display: grid;
+  gap: 10px;
+  margin: auto;
+  width: fit-content;
+  width: -webkit-fit-content;
+  grid-template-columns: repeat(2, minmax(320px, 570px));
+}
+.inMarket > .mainCountainer > .grid > .item {
+  background-color: var(--mainColor);
+  display: flex;
+  color: white;
+  height: 500px;
+  border-radius: 4%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.inMarket > .mainCountainer > .grid > .item > * {
+  margin: 25px;
+}
+.inMarket > .mainCountainer > .grid > .item > img {
+  border-radius: 10%;
+  margin-right: 0;
+}
+.inMarket > .mainCountainer > .grid > .item > .text {
+  height: 90%;
+  width: 58%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.inMarket > .mainCountainer > .grid > .item p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.inMarket > .mainCountainer > .grid > .item > .text > p {
+  font-size: 1.7rem;
+}
+.inMarket > .mainCountainer > .grid > .item hr {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: calc(100% - 25px);
+  margin: -15% 20px 0 0;
+  border: 0;
+  height: 1px;
+}
+.inMarket > .mainCountainer > .grid > .item > .text img {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.inMarket > .mainCountainer > .grid > .item > .text > div:first-of-type {
+  display: flex;
+  align-items: center;
+  padding-right: 25px;
+  justify-content: start;
+}
+.inMarket
+  > .mainCountainer
+  > .grid
+  > .item
+  > .text
+  > div:first-of-type
+  p:last-child {
+  font-weight: 600;
+  margin-top: 7px;
+  color: var(--SecoundryColor);
+}
+.inMarket > .mainCountainer > .grid > .item > .text > div:last-of-type {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 25px;
+}
+.inMarket > .mainCountainer > .grid > .item > .text a {
+  width: calc(100% - 25px);
+  background-color: var(--SecoundryColor);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  align-items: center;
+}
+.inMarket
+  > .mainCountainer
+  > .grid
+  > .item
+  > .text
+  > div:last-of-type
+  > :last-child {
+  text-align: end;
+}
