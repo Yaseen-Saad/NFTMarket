@@ -16,6 +16,10 @@ let main_cont = document.querySelector(".createYourNFT"),
   textTile3 = document.createElement("p"),
   desc3 = document.createElement("p");
 //Adding Text
+//maincContainer
+gridTable.classList.add('maincContainer')
+title.classList.add('maincContainer')
+link.classList.add('maincContainer')
 title.innerText = "Create Your NFT & Put It On The Market.";
 link.innerText = "Create Your NFT Now";
 img1.style.backgroundImage = "url(images/icon-02.png)";

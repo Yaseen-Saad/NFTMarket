@@ -1,5 +1,5 @@
 let categories = document.querySelector(".categories .data");
-fetch("../Json/categriesData.JSON")
+fetch("Json/categriesData.JSON")
   .then((response) => response.json())
   .then((data) => {
     for (let i = 0; i < data.length; i++) {

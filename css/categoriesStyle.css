@@ -1,11 +1,11 @@
-.categories>h2 {
+.categories > h2 {
   margin: auto;
   width: fit-content;
   margin-bottom: 40px;
   color: #fff;
   font-size: 3.4vw;
 }
-.categories>h2>span {
+.categories > h2 > span {
   font-size: 4vw;
   color: var(--SecoundryColor);
 }
@@ -18,7 +18,7 @@
   margin: 0 15px;
   width: 370px;
 }
-.carousel-slider .item .text-box>p:first-child {
+.carousel-slider .item .text-box > p:first-child {
   color: var(--light);
   font-weight: 900;
 }
@@ -62,7 +62,7 @@
   background-image: url(.././images/dark-bg.jpg);
   padding: var(--mainPadding);
 }
-.categories>div:first-of-type {
+.categories > div:first-of-type {
   display: grid;
   width: 100%;
   margin-bottom: 40px;
@@ -71,7 +71,7 @@
   color: #fff;
   margin: 50px 60px;
 }
-.categories>div:first-of-type>div {
+.categories > div:first-of-type > div {
   display: flex;
   position: relative;
   height: 100px;
@@ -83,11 +83,11 @@
   overflow: visible;
   margin-bottom: 10px;
 }
-.categories>div:first-of-type>div p {
+.categories > div:first-of-type > div p {
   z-index: 3;
   margin: 0 0 20px 0;
 }
-.categories>div:first-of-type>div>span:last-child {
+.categories > div:first-of-type > div > span:last-child {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -104,17 +104,17 @@
   opacity: 0;
   z-index: 3;
 }
-.categories>div:first-of-type>div>span:last-child :not(object) {
+.categories > div:first-of-type > div > span:last-child :not(object) {
   transition: 0.1s cubic-bezier(0, 2.84, 0.7, 1.71);
 }
-.categories>div:first-of-type>div>span:last-child:hover {
+.categories > div:first-of-type > div > span:last-child:hover {
   background-color: var(--SecoundryColor);
   color: #fff;
 }
-.categories>div:first-of-type>div:hover {
+.categories > div:first-of-type > div:hover {
   transform: translateY(-10px) scale(1.1);
 }
-.categories>div:first-of-type>div:hover>span:last-child {
+.categories > div:first-of-type > div:hover > span:last-child {
   opacity: 1;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -138,43 +138,42 @@
     width: 400px;
   }
 }
-.control{
+.control {
   position: relative;
 }
-.control button{
-    width: 50px;
-    height: 40px;
-    border: 1px solid white;
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 10px;
-    position: relative;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    cursor: pointer;
+.control button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  position: relative;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  cursor: pointer;
 }
-.control button:nth-child(1){
-      position: absolute;
-        top: -254px;
-        left: -9px;
-        opacity: 0.3;
+.control button:nth-child(1) {
+  position: absolute;
+  top: -254px;
+  left: -9px;
+  opacity: 0.3;
 }
-.control button:nth-child(2){
-      position: absolute;
-        top: -254px;
-        right: -9px;
-        opacity: 0.3;
+.control button:nth-child(2) {
+  position: absolute;
+  top: -254px;
+  right: -9px;
+  opacity: 0.3;
 }
-.control button:hover{
+.control button:hover {
   opacity: 1;
 }
-

@@ -38,3 +38,10 @@ body {
 .ToTop.active {
   transform: translateY(0);
 }
+@media (min-width: 1200px) {
+  body .maincContainer {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 1200px;
+  }
+}

@@ -1,15 +1,19 @@
 .landing {
-  width: 100%;
-  height: 100vh;
-  max-height: 1200px;
-  margin-top: -100px;
+
   background-image: url(../images/banner-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+
+}
+.landing > div{
   padding: 160px var(--mainPadding) 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: 100vh;
+  max-height: 1200px;
+  margin-top: -100px;
 }
 .landing .landing-content {
   display: flex;
