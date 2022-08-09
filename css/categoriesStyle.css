@@ -64,12 +64,13 @@
 }
 .categories > div:first-of-type {
   display: grid;
-  width: 100%;
+  width: fit-content;
+  width: -webkit-fit-content;
   margin-bottom: 40px;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
   gap: 20px 15px;
   color: #fff;
-  margin: 50px 60px;
+  margin: 50px auto;
 }
 .categories > div:first-of-type > div {
   display: flex;
@@ -123,6 +124,9 @@
     margin: 0 13px;
     width: 410px;
   }
+  .categories > div:first-of-type {
+    grid-template-columns: repeat(3, minmax(150px, 200px));
+  }
 }
 @media (min-width: 413px) and (max-width: 767px) {
   .carousel-slider .item {
@@ -130,12 +134,18 @@
     margin: 0 100px;
     width: 450px;
   }
+  .categories > div:first-of-type {
+    grid-template-columns: repeat(3, minmax(100px, 200px));
+  }
 }
 @media (max-width: 412px) {
   .carousel-slider .item {
     border-radius: 5px;
     margin: 0 0px;
     width: 400px;
+  }
+  .categories > div:first-of-type {
+    grid-template-columns: repeat(2, minmax(150px, 200px));
   }
 }
 .control {

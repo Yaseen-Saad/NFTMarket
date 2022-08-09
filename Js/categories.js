@@ -26,7 +26,7 @@ fetch("Json/categoriesSliderData.JSON")
       //Declaration
       let slide = document.createElement("div"),
         img = document.createElement("img"),
-        slider = document.querySelector(".carousel-slider"),
+        slider = document.querySelector(".carousel-slider.maincContainer"),
         txtBox = document.createElement("div"),
         namee = document.createElement("p"),
         hr = document.createElement("hr"),
@@ -38,7 +38,7 @@ fetch("Json/categoriesSliderData.JSON")
         colectionP = document.createElement("p"),
         categoryP = document.createElement("p"),
         link = document.createElement("a");
-
+//
       // Adding Classes
       slide.classList.add("item");
       txtBox.classList.add("text-box");
@@ -73,9 +73,9 @@ fetch("Json/categoriesSliderData.JSON")
   });
 
 setTimeout(() => {
-  let slideContainer = document.querySelector(".carousel-slider"),
-    slide = document.querySelector(".carousel-slider > div"),
-    slides = document.querySelectorAll(".carousel-slider div .item ");
+  let slideContainer = document.querySelector(".carousel-slider.maincContainer"),
+    slide = document.querySelector(".carousel-slider.maincContainer > div"),
+    slides = document.querySelectorAll(".carousel-slider.maincContainer div .item ");
 
   const nextBtn = document.querySelector(".control button:nth-child(2)");
   const prevBtn = document.querySelector(".control button:nth-child(1)");

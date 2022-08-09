@@ -1,11 +1,9 @@
 .landing {
-
   background-image: url(../images/banner-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-
 }
-.landing > div{
+.landing > div {
   padding: 160px var(--mainPadding) 0;
   display: flex;
   justify-content: space-between;
@@ -174,7 +172,7 @@
   .landing .landing-content .btns {
     margin-left: 0px;
   }
-  .landing {
+  .landing > div {
     flex-flow: column;
     height: 200vh;
   }
@@ -221,7 +219,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  .landing {
+  .landing > div {
     flex-flow: column;
     height: 200vh;
   }
