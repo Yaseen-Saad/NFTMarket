@@ -66,7 +66,7 @@ fetch("Json/tagsData.JSON")
               }M ${Sec >= 10 ? Sec : "0" + Sec}S`;
         counterP.innerText = time;
         counterCont.innerHTML == "Time Out"
-          ? (counterCont.style.cssText = "color:#F48989;font-size:2rem;")
+          ? (counterCont.style.cssText = "color:#F48989;font-size:1.2rem;")
           : "";
       }, 1000);
       counterDeadLine.innerText = ele.deadLine;
@@ -75,7 +75,7 @@ fetch("Json/tagsData.JSON")
       counterCont.prepend(endsIn, counterP, counterDeadLine);
       bidSec.prepend(bid, ETH, price);
       secSecCont.prepend(bidSec, counterCont);
-      userNameMiniCont.prepend(userName, userNameDes);
+      userNameMiniCont.prepend(userNameDes, userName);
       userNameCont.prepend(userNameImg, userNameMiniCont);
       text.prepend(name, userNameCont, hr, secSecCont, link);
       item.prepend(mainImg, text);
@@ -91,7 +91,6 @@ fetch("Json/tagsData.JSON")
       );
     tabs.forEach((ele) => {
       ele.onclick = () => {
-        console.log(123);
         tabs.forEach((ele) => ele.classList.remove("active"));
         ele.classList.add("active");
         items.forEach((item) => {
