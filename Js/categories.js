@@ -19,7 +19,7 @@ fetch("Json/categriesData.JSON")
   });
 let container = document.createElement("div");
 container.classList.add("Slider-Container");
-fetch("../Json/categoriesSliderData.JSON")
+fetch("Json/categoriesSliderData.JSON")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((item) => {
