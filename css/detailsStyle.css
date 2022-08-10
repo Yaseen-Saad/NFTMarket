@@ -127,7 +127,7 @@ section.Landing .maincContainer .links a:hover {
   align-items: center;
 }
 .View .maincContainer .flex > .text .sub input,
-.View .maincContainer .flex > .text .sub a {
+.View .maincContainer .flex > .text .sub input[type="submit"] {
   width: 120px;
   height: 55px;
   font-size: 1.6rem;
@@ -141,11 +141,12 @@ section.Landing .maincContainer .links a:hover {
   background-color: transparent;
   padding: 25px 20px;
 }
-.View .maincContainer .flex > .text .sub a {
+.View .maincContainer .flex > .text .sub input[type="submit"] {
   font-size: 1.2rem;
   width: 150px;
+  padding: 0;
 }
-.View .maincContainer .flex > .text .sub a:hover {
+.View .maincContainer .flex > .text .sub input[type="submit"]:hover {
   background-color: #fff;
   color: var(--SecoundryColor);
   border: 0;
@@ -195,7 +196,31 @@ section.Landing .maincContainer .links a:hover {
     justify-content: center;
   }
   .View .maincContainer .flex .text > .sub > input,
-  .View .maincContainer .flex .text > .sub > a {
+  .View .maincContainer .flex .text > .sub > input[type="submit"] {
     margin: 10px 0;
   }
+}
+.View .maincContainer .grid {
+  display: grid;
+  margin-top: 150px;
+  place-items: center;
+  gap: 20px 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
+}
+.View .maincContainer .grid > div {
+  width: 90%;
+  color: #fff;
+  background-color: var(--mainColor);
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.View .maincContainer .grid > div > img {
+  width: 50%;
+}
+.View .maincContainer .grid > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
