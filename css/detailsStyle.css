@@ -1,37 +1,201 @@
+section.Landing {
+  background-image: url(../images/heading-bg.jpg);
+  background-size: cover;
+}
+section.Landing .maincContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+section.Landing .maincContainer p:first-child {
+  margin: 30px 0 5px;
+  font-size: 1rem;
+}
+section.Landing .maincContainer p:last-of-type span:last-child {
+  cursor: pointer;
+}
+section.Landing .maincContainer p:last-of-type span:first-child {
+  color: var(--SecoundryColor);
+}
+section.Landing .maincContainer h2 {
+  font-size: 2rem;
+}
+section.Landing .maincContainer .links {
+  margin: 20px 0 50px;
+  min-width: 310px;
+  display: flex;
+  width: 35%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: fit-content;
+  max-width: 500px;
+}
+section.Landing .maincContainer .links a {
+  padding: 10px 15px;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  border-radius: 20px;
+  margin: 10px auto;
+  background-color: var(--SecoundryColor);
+}
+section.Landing .maincContainer .links a:hover {
+  color: var(--SecoundryColor);
+  background-color: #fff;
+}
+.View {
+  padding: 50px 0;
+  background-image: url(../images/dark-bg.jpg);
+}
+.View .maincContainer h2 {
+  margin: 0;
+  margin: 40px;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.View .maincContainer h2::before {
+  content: "";
+  background-color: var(--SecoundryColor);
+  width: 15%;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.View .maincContainer h2 span {
+  color: var(--SecoundryColor);
+  font-size: 2rem;
+}
+.View .maincContainer .flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 30px;
+}
+.View .maincContainer .flex > img {
+  margin: 0 90px 0 70px;
+  transform: scaleX(1.22) scaleY(1.1);
+  border-radius: 10%;
+  max-height: 500px;
+}
+.View .maincContainer .flex > .text {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+  color: #fff;
+  font-size: 1.4rem;
+}
+.View .maincContainer .flex > .text .imgCont {
+  display: flex;
+  justify-content: start;
+}
+.View .maincContainer .flex > .text .imgCont img {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.View .maincContainer .flex > .text > p:first-child {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.View .maincContainer .flex > .text .imgCont .userInfo {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+}
+.View .maincContainer .flex > .text .imgCont .userInfo span:last-child {
+  color: var(--SecoundryColor);
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.View .maincContainer .flex > .text .sub {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.View .maincContainer .flex > .text .sub input,
+.View .maincContainer .flex > .text .sub a {
+  width: 120px;
+  height: 55px;
+  font-size: 1.6rem;
+  border-radius: 25px;
+  color: #fff;
+  border: 1px solid var(--SecoundryColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px 0;
+  background-color: transparent;
+  padding: 25px 20px;
+}
+.View .maincContainer .flex > .text .sub a {
+  font-size: 1.2rem;
+  width: 150px;
+}
+.View .maincContainer .flex > .text .sub a:hover {
+  background-color: #fff;
+  color: var(--SecoundryColor);
+  border: 0;
+}
+.View .maincContainer .flex > .text .sub input:focus {
+  outline: 0;
+}
+.View .maincContainer .flex > .text .itemInfo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0 30px;
+}
+.View .maincContainer .flex > .text .itemInfo > span {
+  width: 50%;
+  min-width: 220px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.View .maincContainer .flex > .text .itemInfo > span span:nth-child(2) {
+  color: var(--SecoundryColor);
+  font-weight: 800;
+}
+@media (max-width: 886px) {
+  .View .maincContainer .flex {
+    flex-direction: column;
+  }
+  .View .maincContainer .flex .text {
+    width: 100%;
+    margin-top: 60px;
+  }
+  .View .maincContainer .flex > img {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media (max-width: 524px) {
+  .View .maincContainer .flex .text > p:not(:first-child),
+  .View .maincContainer .flex .text > span.itemInfo > span:first-child {
+    display: none;
+  }
+  .View .maincContainer .flex .text > .sub {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .View .maincContainer .flex .text > .sub > input,
+  .View .maincContainer .flex .text > .sub > a {
+    margin: 10px 0;
+  }
+}
