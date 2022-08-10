@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        NFT Market
+    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <link rel="stylesheet" href="fontawsome/all.min.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <!-- google fonts -->
+
+    <!-- Normalize css -->
+    <link rel="stylesheet" href="../../normalize/normalize.css">
+    <!-- Style Css -->
+    <link rel="stylesheet" href="../../css/mainStyle.css">
+    <!-- Nav Style -->
+    <link rel="stylesheet" href="../../css/nav.css">
+    <!-- Home Style -->
+    <link rel="stylesheet" href="../../css/homeStyle.css">
+    <!-- Categories Style -->
+    <link rel="stylesheet" href="../../css/categoriesStyle.css">
+    <!-- landing Style -->
+    <link rel="stylesheet" href="../../css/landingStyle.css">
+    <!-- Pre LoadvStyle -->
+    <link rel="stylesheet" href="../../css/preLoad.css">
+    <!-- Create Your NFT Style -->
+    <link rel="stylesheet" href="../../css/createYourNFT.css">
+    <!-- In Market Style -->
+    <link rel="stylesheet" href="../../css/inMarket.css">
+
+</head>
+
+<body>
+    <!-- Preload Section -->
+    <div class="preLoad">
+        <div class="dots-cont">
+            <span class="dots"></span>
+            <span class="dots"></span>
+            <span class="dots"></span>
+            <span class="dots"></span>
+        </div>
+    </div>
+    <section>
+        <!-- Start Nav -->
+        <header class="maincContainer">
+            <nav>
+                <img src="../../images/logo.png" alt="Liberty Logo">
+                <ul>
+                    <li><a href="../../index.html">home</a></li>
+                    <li><a href="../explore/index.html">explore</a></li>
+                    <li><a href="../details/index.html">item details</a></li>
+                    <li><a href="../author/index.html">author</a></li>
+                    <li class="active"><a href=".">create yours</a></li>
+                </ul>
+                <span class="toggler">
+                    <span></span><span></span><span></span>
+                </span>
+            </nav>
+            <ul class="responsive">
+                <li><a href="../../index.html">home</a></li>
+                <li><a href="../explore/index.html">explore</a></li>
+                <li><a href=".">item details</a></li>
+                <li><a href="../author/index.html">author</a></li>
+                <li class="active"><a href=".">create yours</a></li>
+            </ul>
+        </header>
+        <!-- End Nav -->
+
+        <!-- Start Create Your NFT -->
+        <section class="createYourNFT">
+            <!-- don't edit here data from js file -->
+        </section>
+        <!-- End Create Your NFT -->
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- fontawesome JS -->
+    <script src="../../fontawsome/all.min.js"></script>
+    <!-- Main Js -->
+    <script src="../../Js/main.js"></script>
+    <!-- Nav JS -->
+    <script>
+        // Nav
+        let toggler = document.querySelector(".toggler");
+        let ul = document.querySelector("header > ul");
+        toggler.onclick = () => {
+            ul.classList.toggle("active");
+            toggler.classList.toggle("active");
+        }
+    </script>
+    <!-- To Top JS -->
+    <script src="../../Js/toTop.js"></script>
+    <!-- Categories JS -->
+    <script src="../../Js/categories.js"></script>
+    <!-- Pre Load JS -->
+    <script src="../../Js/preLoad.js"></script>
+    <!-- Pending JS -->
+    <script src="../Js/createYourNFT.js"></script>
+    <!-- landing js -->
+    <script src="../../Js/landing.js"></script>
+    <!-- In Market js -->
+    <script src="../../Js/inMarket.js"></script>
+</body>
+
+</html>
