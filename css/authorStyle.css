@@ -51,6 +51,12 @@ section.Landing .maincContainer .links a:hover {
   padding: 50px 0;
   background-image: url(../images/dark-bg.jpg);
 }
+.View .maincContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .View .maincContainer .flex {
   color: #fff;
   display: flex;
@@ -104,6 +110,7 @@ section.Landing .maincContainer .links a:hover {
   align-items: center;
   width: 100%;
 }
+.View .maincContainer .grid > div > a,
 .View .maincContainer .flex > div:last-child > :last-child a {
   color: #fff;
   background-color: var(--SecoundryColor);
@@ -114,6 +121,7 @@ section.Landing .maincContainer .links a:hover {
   align-items: center;
   justify-content: center;
 }
+.View .maincContainer .grid > div > a:hover,
 .View .maincContainer .flex > div:last-child > :last-child a:hover {
   background-color: #fff;
   color: var(--SecoundryColor);
@@ -152,15 +160,6 @@ section.Landing .maincContainer .links a:hover {
     width: 90%;
   }
 }
-.View .maincContainer .grid {
-  display: grid;
-  margin-top: 150px;
-  place-items: center;
-  gap: 20px 10px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
-}
-.View .maincContainer .grid > div {
-}
 .View .maincContainer .flex > div:first-child > :last-child > :last-child,
 .View
   .maincContainer
@@ -168,7 +167,72 @@ section.Landing .maincContainer .links a:hover {
   > div:last-child
   > :first-child
   > div
-  > p:not(:last-child) {
+  > p:not(:last-child),
+.View .maincContainer .grid > div > div:nth-of-type(2) > div > p:last-child {
   color: var(--SecoundryColor);
   font-weight: 700;
+}
+.View > .maincContainer > .grid {
+  width: 100%;
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.View .maincContainer .grid > div {
+  background-color: var(--mainColor);
+  display: flex;
+  color: #fff;
+  margin-bottom: 30px;
+  min-width: 190px !important;
+  max-width: 260px;
+  border-radius: 30px;
+  border: 1px solid #404245;
+  flex-direction: column;
+  padding: 50px 30px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.View .maincContainer .grid > div > div:first-child {
+  position: relative;
+}
+.View .maincContainer .grid > div > div:first-child > img:last-child {
+  border-radius: 30px;
+  width: 100%;
+}
+.View .maincContainer .grid > div > div:first-child > img:first-child {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.View .maincContainer .grid > div > p {
+  width: 100%;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.View .maincContainer .grid > div > div:nth-of-type(2) {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.View .maincContainer .grid > div > hr {
+  width: 100%;
+  margin: 0 0 5px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0;
+}
+.View .maincContainer .grid > div > div:nth-of-type(2) > div > p {
+  margin: 0;
+}
+.View .maincContainer .grid > div > a {
+  width: 100%;
+  border-radius: 2px;
+  margin-top: 20px;
 }

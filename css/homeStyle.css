@@ -343,6 +343,10 @@
   color: #fff;
   align-items: center;
 }
+.inMarket > .maincContainer > .grid > .item > .text a:hover {
+  color: var(--SecoundryColor);
+  background-color: #fff;
+}
 .inMarket
   > .maincContainer
   > .grid
