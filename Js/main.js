@@ -16,6 +16,7 @@ scrollToTop.classList.add("ToTop");
 // Pending Elements
 scrollToTop.append(icon);
 document.body.append(scrollToTop);
+
 // Adding Events
 scrollToTop.onclick = () => scrollTo({ top: 0, behavior: "smooth" });
 window.addEventListener("scroll", () => {

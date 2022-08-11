@@ -144,6 +144,7 @@ section.Landing .maincContainer .links a:hover {
 .View .maincContainer .flex > .text .sub input[type="submit"] {
   font-size: 1.2rem;
   width: 150px;
+  cursor: pointer;
   padding: 0;
 }
 .View .maincContainer .flex > .text .sub input[type="submit"]:hover {

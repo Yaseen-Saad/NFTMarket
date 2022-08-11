@@ -47,15 +47,15 @@
   -ms-transform: skew(20deg);
   -o-transform: skew(20deg);
   background-color: rgba(255, 255, 255, 0.527);
-  transition: 0.8s 0.5s;
-  -webkit-transition: 0.8s 0.5s;
-  -moz-transition: 0.8s 0.5s;
-  -ms-transition: 0.8s 0.5s;
-  -o-transition: 0.8s 0.5s;
+  transition: 0.8s 0.3s;
+  -webkit-transition: 0.8s 0.3s;
+  -moz-transition: 0.8s 0.3s;
+  -ms-transition: 0.8s 0.3s;
+  -o-transition: 0.8s 0.3s;
 }
 .createYourNFT > a:hover::after {
-  animation: btn 0.8s 0.5s ease-out;
-  -webkit-animation: btn 0.8s 0.5s ease-out;
+  animation: btn 0.8s 0.3s ease-out;
+  -webkit-animation: btn 0.8s 0.3s ease-out;
 }
 @keyframes btn {
   0% {
