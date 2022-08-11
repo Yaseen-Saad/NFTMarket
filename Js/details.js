@@ -38,7 +38,7 @@ fetch("../../Json/Details.Json")
       date.innerHTML = ele.date;
       img.src = ele.image;
       bid.innerHTML = "Bid :";
-      bidSpan.innerHTML = ele.bid;
+      bidSpan.innerHTML = ele.bid + " ETH";
       bidCont.prepend(bid, bidSpan);
       top.prepend(name, userName);
       bottom.prepend(bidCont, date);
