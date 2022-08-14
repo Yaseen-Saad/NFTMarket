@@ -22,7 +22,7 @@
 		"artistPic": "images/author.jpg",
 		"bid": 2.44,
 		"price": 8200.5,
-		"deadLine": "1/12/2022",
+		"deadLine": "12/1/2022",
 		"details": "#"
 	},
 	{
@@ -35,7 +35,7 @@
 		"artistPic": "images/author.jpg",
 		"bid": 2.03,
 		"price": 7200.5,
-		"deadLine": "7/5/2022",
+		"deadLine": "5/7/2022",
 		"details": "#"
 	},
 	{
@@ -48,7 +48,7 @@
 		"artistPic": "images/author.jpg",
 		"bid": 2.5,
 		"price": 8400.5,
-		"deadLine": "31/12/2022",
+		"deadLine": "12/31/2022",
 		"details": "#"
 	},
 	{
@@ -74,7 +74,7 @@
 		"artistPic": "images/author.jpg",
 		"bid": 2.44,
 		"price": 8200.5,
-		"deadLine": "11/3/2023",
+		"deadLine": "3/11/2023",
 		"details": "#"
 	}
 ]

@@ -99,6 +99,33 @@
 	}
 }
 
+@media (max-width: 676px) {
+	#home-market .market-content .item {
+		grid-template-columns: 86px auto;
+		grid-template-rows: 200px auto auto auto auto;
+		grid-template-areas:
+			"nft-img nft-img"
+			"nft-title nft-title"
+			"artist artist"
+			"bid deadline"
+			"details-link details-link";
+	}
+
+	#home-market .market-content .item .nft-img {
+		transform: rotate(90deg);
+		justify-self: center;
+		margin-bottom: 20px;
+	}
+
+	#home-market .market-content .item .item-name {
+		justify-self: center;
+	}
+
+	#home-market .market-content .item .details-link {
+		justify-self: center;
+	}
+}
+
 #home-market .market-content .item .nft-img {
 	grid-area: nft-img;
 	max-width: 100%;
@@ -163,6 +190,7 @@
 
 #home-market .market-content .item .deadline-section {
 	grid-area: deadline;
+	text-align: right;
 }
 
 #home-market .market-content .item .deadline-section h6,
@@ -172,7 +200,7 @@
 }
 
 #home-market .market-content .item .deadline-section .counter {
-	font-size: 20px;
+	font-size: 17px;
 	font-weight: 700;
 	margin: 10px 0;
 }

@@ -97,10 +97,37 @@ fetch("../Json/homeMarketData.JSON")
 			// counter p and class and text content
 			const counterP = document.createElement("p");
 			counterP.classList.add("counter");
-			counterP.textContent = item.deadLine;
 			// append counter p
 			deadlineDiv.appendChild(counterP);
+			// counter spans
+			const daysSpan = document.createElement("span");
+			const hoursSpan = document.createElement("span");
+			const minutesSpan = document.createElement("span");
+			const secondsSpan = document.createElement("span");
+			counterP.append(daysSpan);
+			counterP.append(hoursSpan);
+			counterP.append(minutesSpan);
+			counterP.append(secondsSpan);
+			const endDate = new Date(item.deadLine).getTime();
 
+			// counter functionality
+			setInterval(() => {
+				const todayDate = Date.now();
+				const countTime = endDate - todayDate;
+
+				let days = Math.floor(countTime / (1000 * 60 * 60 * 24));
+				let hours = Math.floor(countTime % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+				let minuets = Math.floor(countTime % (1000 * 60 * 60) / (1000 * 60));
+				let seconds = Math.floor(countTime % (1000 * 60) / 1000);
+				if (countTime > 0) {
+					daysSpan.textContent = days > 10 ? `${days}D ` : `0${days}D `;
+					hoursSpan.textContent = hours > 10 ? `${hours}H ` : `0${hours}H `;
+					minutesSpan.textContent = minuets > 10 ? `${minuets}M ` : `0${minuets}M `;
+					secondsSpan.textContent = seconds > 10 ? `${seconds}S ` : `0${seconds}S `;
+				} else {
+					counterP.innerHTML = "Expired";
+				}
+			}, 1000);
 			// date p and class and text content
 			const dateP = document.createElement("p");
 			dateP.classList.add("date");
@@ -158,11 +185,8 @@ function hideAndShowItems(tag) {
 	}
 }
 
-// console.log(new Date("Dec 1, 2022").getTime());
-
 function validateDate(date) {
-
-	let day = date.slice(0, date.indexOf("/"));
+	let day = date.slice(date.indexOf("/") + 1, date.lastIndexOf("/"));
 	// validate day
 	if (day.length == 1 || day.length == 2 && day < 21) {
 		if (day == 1) {
@@ -186,7 +210,7 @@ function validateDate(date) {
 		}
 	}
 
-	let month = date.slice(date.indexOf("/") + 1, date.lastIndexOf("/"));
+	let month = date.slice(0, date.indexOf("/"));
 	let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 	let year = date.slice(date.lastIndexOf("/") + 1);
